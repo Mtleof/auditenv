@@ -1,0 +1,118 @@
+{
+  "episode_id": "EP-CC170FE47C",
+  "issues": [
+    {
+      "issue_id": "ISS-66D3FD9C",
+      "type": "missing_or_partial_allocation",
+      "affected_ids": [
+        "INV-1E42B086",
+        "PAY-B8639867"
+      ],
+      "expected_amount_minor": 852831,
+      "currency": "EUR",
+      "evidence_sets": [
+        [
+          "D-E621A98FA6"
+        ]
+      ],
+      "scenario": "fx_partial_boundary"
+    },
+    {
+      "issue_id": "ISS-ECDEC135",
+      "type": "wrong_fx_date_or_rate",
+      "affected_ids": [
+        "PAY-B8639867"
+      ],
+      "expected_amount_minor": 18201,
+      "currency": "CHF",
+      "evidence_sets": [
+        [
+          "D-E621A98FA6",
+          "FX:2023-01-31:EUR:CHF",
+          "L-1B8B9DA0",
+          "L-3B0E6AEA"
+        ],
+        [
+          "D-E621A98FA6",
+          "FX:2023-01-31:EUR:CHF",
+          "L-1B4C9F95",
+          "L-B3062EE3"
+        ]
+      ],
+      "scenario": "fx_partial_boundary"
+    },
+    {
+      "issue_id": "ISS-51A63BDE",
+      "type": "missing_or_partial_allocation",
+      "affected_ids": [
+        "INV-8D55FF7C",
+        "PAY-377360BD"
+      ],
+      "expected_amount_minor": 1841940,
+      "currency": "EUR",
+      "evidence_sets": [
+        [
+          "D-2792EE74CC"
+        ]
+      ],
+      "scenario": "fx_partial_boundary"
+    },
+    {
+      "issue_id": "ISS-0AC1D60E",
+      "type": "wrong_fx_date_or_rate",
+      "affected_ids": [
+        "PAY-377360BD"
+      ],
+      "expected_amount_minor": 17015,
+      "currency": "CHF",
+      "evidence_sets": [
+        [
+          "D-2792EE74CC",
+          "FX:2023-01-31:EUR:CHF",
+          "L-B1C3B099",
+          "L-E70BF7AB"
+        ],
+        [
+          "D-2792EE74CC",
+          "FX:2023-01-31:EUR:CHF",
+          "L-1A8F01A7",
+          "L-9A336B6F"
+        ]
+      ],
+      "scenario": "fx_partial_boundary"
+    },
+    {
+      "issue_id": "ISS-C1B1DFAD",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-9F0842EC",
+        "INV-DA4856AC"
+      ],
+      "expected_amount_minor": 754494,
+      "currency": "CHF",
+      "evidence_sets": [
+        [
+          "D-B0379AD4AD",
+          "D-DFF74FFE38"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-53DAC91E",
+      "type": "missing_or_partial_allocation",
+      "affected_ids": [
+        "INV-6785847D",
+        "PAY-F5D3395C"
+      ],
+      "expected_amount_minor": 1744221,
+      "currency": "CHF",
+      "evidence_sets": [
+        [
+          "D-87439B3B8C"
+        ]
+      ],
+      "scenario": "single"
+    }
+  ]
+}

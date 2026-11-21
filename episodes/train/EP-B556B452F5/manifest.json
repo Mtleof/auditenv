@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "env_version": "1.0.0",
+  "generator_version": "1.0.0",
+  "config_version": "1.0.0",
+  "episode_id": "EP-B556B452F5",
+  "company_id": "CO-8857E5",
+  "base_currency": "USD",
+  "currency_exponents": {
+    "CHF": 2,
+    "SEK": 2,
+    "USD": 2
+  },
+  "period_start": "2023-03-01",
+  "period_end": "2023-03-31",
+  "timezone": "-08:00",
+  "counts": {
+    "ledger_rows": 400,
+    "invoices": 66,
+    "payments": 51,
+    "documents": 117,
+    "fx_rates": 110
+  },
+  "rounding": {
+    "mode": "ROUND_HALF_EVEN",
+    "unit": "target currency minor unit",
+    "applied": "once per ledger row"
+  },
+  "csv_null": "empty field",
+  "files": [
+    "manifest.json",
+    "ledger.csv",
+    "invoices.jsonl",
+    "payments.jsonl",
+    "fx.csv",
+    "policy.json"
+  ]
+}

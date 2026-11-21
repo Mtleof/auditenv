@@ -1,0 +1,45 @@
+{
+  "episode_id": "EP-7C2B01255B",
+  "issues": [
+    {
+      "issue_id": "ISS-72E92270",
+      "type": "missing_or_partial_allocation",
+      "affected_ids": [
+        "INV-E84FF27D",
+        "PAY-EE2C0A2C"
+      ],
+      "expected_amount_minor": 226553,
+      "currency": "USD",
+      "evidence_sets": [
+        [
+          "D-132504940A"
+        ]
+      ],
+      "scenario": "fx_partial_boundary"
+    },
+    {
+      "issue_id": "ISS-B1133B12",
+      "type": "wrong_fx_date_or_rate",
+      "affected_ids": [
+        "PAY-EE2C0A2C"
+      ],
+      "expected_amount_minor": 4901,
+      "currency": "GBP",
+      "evidence_sets": [
+        [
+          "D-132504940A",
+          "FX:2024-05-01:USD:GBP",
+          "L-C8E464CA",
+          "L-F690577D"
+        ],
+        [
+          "D-132504940A",
+          "FX:2024-05-01:USD:GBP",
+          "L-D57BC4D2",
+          "L-E291D2E6"
+        ]
+      ],
+      "scenario": "fx_partial_boundary"
+    }
+  ]
+}

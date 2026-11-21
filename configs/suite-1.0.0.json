@@ -1,0 +1,586 @@
+[
+  {
+    "name": "train-01",
+    "split": "train",
+    "category": "clean",
+    "config_hash": "781378d9a8f49e51",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": false,
+          "count": 0
+        },
+        "missing_or_partial_allocation": {
+          "enabled": false,
+          "count": 0
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": false,
+          "count": 0
+        },
+        "period_misattribution": {
+          "enabled": false,
+          "count": 0
+        }
+      }
+    }
+  },
+  {
+    "name": "train-02",
+    "split": "train",
+    "category": "clean",
+    "config_hash": "3a8993b4640b4bda",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": false,
+          "count": 0
+        },
+        "missing_or_partial_allocation": {
+          "enabled": false,
+          "count": 0
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": false,
+          "count": 0
+        },
+        "period_misattribution": {
+          "enabled": false,
+          "count": 0
+        }
+      },
+      "ledger_rows": [
+        900,
+        1200
+      ],
+      "row_order": "shuffled"
+    }
+  },
+  {
+    "name": "train-03",
+    "split": "train",
+    "category": "clean",
+    "config_hash": "98f40e8ee53a59b7",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": false,
+          "count": 0
+        },
+        "missing_or_partial_allocation": {
+          "enabled": false,
+          "count": 0
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": false,
+          "count": 0
+        },
+        "period_misattribution": {
+          "enabled": false,
+          "count": 0
+        }
+      },
+      "distractors": {
+        "tz_boundary": 4,
+        "refunds": 2,
+        "split_payments": 3
+      }
+    }
+  },
+  {
+    "name": "train-04",
+    "split": "train",
+    "category": "interaction",
+    "config_hash": "c0179a0e447c3f11",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": false,
+          "count": 0
+        },
+        "missing_or_partial_allocation": {
+          "enabled": false,
+          "count": 0
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": false,
+          "count": 0
+        },
+        "period_misattribution": {
+          "enabled": false,
+          "count": 0
+        }
+      },
+      "interactions": {
+        "fx_partial_boundary": 1,
+        "duplicate_cross_period": 0
+      }
+    }
+  },
+  {
+    "name": "train-05",
+    "split": "train",
+    "category": "interaction",
+    "config_hash": "46ce2dc574acfa71",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": true,
+          "count": 1
+        },
+        "missing_or_partial_allocation": {
+          "enabled": false,
+          "count": 0
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": true,
+          "count": 1
+        },
+        "period_misattribution": {
+          "enabled": false,
+          "count": 0
+        }
+      },
+      "interactions": {
+        "fx_partial_boundary": 0,
+        "duplicate_cross_period": 1
+      }
+    }
+  },
+  {
+    "name": "train-06",
+    "split": "train",
+    "category": "mixed",
+    "config_hash": "d84ffdb3389b063d",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": true,
+          "count": 1
+        },
+        "missing_or_partial_allocation": {
+          "enabled": true,
+          "count": 1
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": true,
+          "count": 1
+        },
+        "period_misattribution": {
+          "enabled": true,
+          "count": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "train-07",
+    "split": "train",
+    "category": "mixed",
+    "config_hash": "fb16fa0657ea94dc",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": true,
+          "count": 3
+        },
+        "missing_or_partial_allocation": {
+          "enabled": true,
+          "count": 3
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": true,
+          "count": 2
+        },
+        "period_misattribution": {
+          "enabled": true,
+          "count": 2
+        }
+      },
+      "n_invoices": [
+        50,
+        70
+      ]
+    }
+  },
+  {
+    "name": "train-08",
+    "split": "train",
+    "category": "mixed",
+    "config_hash": "cd7ae23e7ae3c332",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": false,
+          "count": 0
+        },
+        "missing_or_partial_allocation": {
+          "enabled": false,
+          "count": 0
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": true,
+          "count": 2
+        },
+        "period_misattribution": {
+          "enabled": false,
+          "count": 0
+        }
+      },
+      "foreign_share_pct": 70
+    }
+  },
+  {
+    "name": "train-09",
+    "split": "train",
+    "category": "mixed",
+    "config_hash": "d04c0be6de24a540",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": true,
+          "count": 1
+        },
+        "missing_or_partial_allocation": {
+          "enabled": true,
+          "count": 2
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": false,
+          "count": 0
+        },
+        "period_misattribution": {
+          "enabled": true,
+          "count": 1
+        }
+      },
+      "n_invoices": [
+        14,
+        20
+      ],
+      "ledger_rows": [
+        200,
+        260
+      ]
+    }
+  },
+  {
+    "name": "train-10",
+    "split": "train",
+    "category": "mixed",
+    "config_hash": "ec7460fabc89127a",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": true,
+          "count": 2
+        },
+        "missing_or_partial_allocation": {
+          "enabled": true,
+          "count": 1
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": true,
+          "count": 1
+        },
+        "period_misattribution": {
+          "enabled": true,
+          "count": 2
+        }
+      },
+      "row_order": "shuffled"
+    }
+  },
+  {
+    "name": "dev-01",
+    "split": "dev",
+    "category": "clean",
+    "config_hash": "781378d9a8f49e51",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": false,
+          "count": 0
+        },
+        "missing_or_partial_allocation": {
+          "enabled": false,
+          "count": 0
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": false,
+          "count": 0
+        },
+        "period_misattribution": {
+          "enabled": false,
+          "count": 0
+        }
+      }
+    }
+  },
+  {
+    "name": "dev-02",
+    "split": "dev",
+    "category": "clean",
+    "config_hash": "2a20748d310f9785",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": false,
+          "count": 0
+        },
+        "missing_or_partial_allocation": {
+          "enabled": false,
+          "count": 0
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": false,
+          "count": 0
+        },
+        "period_misattribution": {
+          "enabled": false,
+          "count": 0
+        }
+      },
+      "n_invoices": [
+        80,
+        95
+      ],
+      "ledger_rows": [
+        1500,
+        1800
+      ],
+      "foreign_share_pct": 60
+    }
+  },
+  {
+    "name": "dev-03",
+    "split": "dev",
+    "category": "interaction",
+    "config_hash": "c45a9e936a298883",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": false,
+          "count": 0
+        },
+        "missing_or_partial_allocation": {
+          "enabled": false,
+          "count": 0
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": false,
+          "count": 0
+        },
+        "period_misattribution": {
+          "enabled": false,
+          "count": 0
+        }
+      },
+      "interactions": {
+        "fx_partial_boundary": 1,
+        "duplicate_cross_period": 1
+      }
+    }
+  },
+  {
+    "name": "dev-04",
+    "split": "dev",
+    "category": "interaction",
+    "config_hash": "d7ae16f7e12cd16d",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": true,
+          "count": 1
+        },
+        "missing_or_partial_allocation": {
+          "enabled": true,
+          "count": 1
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": false,
+          "count": 0
+        },
+        "period_misattribution": {
+          "enabled": false,
+          "count": 0
+        }
+      },
+      "interactions": {
+        "fx_partial_boundary": 2,
+        "duplicate_cross_period": 0
+      }
+    }
+  },
+  {
+    "name": "dev-05",
+    "split": "dev",
+    "category": "interaction",
+    "config_hash": "31f13f5800793744",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": false,
+          "count": 0
+        },
+        "missing_or_partial_allocation": {
+          "enabled": true,
+          "count": 1
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": true,
+          "count": 1
+        },
+        "period_misattribution": {
+          "enabled": true,
+          "count": 1
+        }
+      },
+      "interactions": {
+        "fx_partial_boundary": 1,
+        "duplicate_cross_period": 2
+      }
+    }
+  },
+  {
+    "name": "dev-06",
+    "split": "dev",
+    "category": "mixed",
+    "config_hash": "d84ffdb3389b063d",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": true,
+          "count": 1
+        },
+        "missing_or_partial_allocation": {
+          "enabled": true,
+          "count": 1
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": true,
+          "count": 1
+        },
+        "period_misattribution": {
+          "enabled": true,
+          "count": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "dev-07",
+    "split": "dev",
+    "category": "mixed",
+    "config_hash": "7b00fa03725cedc2",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": true,
+          "count": 2
+        },
+        "missing_or_partial_allocation": {
+          "enabled": true,
+          "count": 2
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": true,
+          "count": 2
+        },
+        "period_misattribution": {
+          "enabled": true,
+          "count": 2
+        }
+      },
+      "ledger_rows": [
+        1950,
+        2000
+      ],
+      "n_invoices": [
+        90,
+        100
+      ]
+    }
+  },
+  {
+    "name": "dev-08",
+    "split": "dev",
+    "category": "mixed",
+    "config_hash": "780134978725a8bf",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": false,
+          "count": 0
+        },
+        "missing_or_partial_allocation": {
+          "enabled": true,
+          "count": 3
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": false,
+          "count": 0
+        },
+        "period_misattribution": {
+          "enabled": false,
+          "count": 0
+        }
+      },
+      "foreign_share_pct": 0
+    }
+  },
+  {
+    "name": "dev-09",
+    "split": "dev",
+    "category": "mixed",
+    "config_hash": "398047e6d36816dc",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": false,
+          "count": 0
+        },
+        "missing_or_partial_allocation": {
+          "enabled": false,
+          "count": 0
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": true,
+          "count": 3
+        },
+        "period_misattribution": {
+          "enabled": true,
+          "count": 3
+        }
+      },
+      "foreign_share_pct": 90
+    }
+  },
+  {
+    "name": "dev-10",
+    "split": "dev",
+    "category": "mixed",
+    "config_hash": "da96760b1d5b30a6",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": true,
+          "count": 1
+        },
+        "missing_or_partial_allocation": {
+          "enabled": false,
+          "count": 0
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": false,
+          "count": 0
+        },
+        "period_misattribution": {
+          "enabled": false,
+          "count": 0
+        }
+      },
+      "row_order": "shuffled"
+    }
+  }
+]

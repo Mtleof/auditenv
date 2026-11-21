@@ -1,0 +1,80 @@
+{
+  "episode_id": "EP-B556B452F5",
+  "issues": [
+    {
+      "issue_id": "ISS-94D21A8E",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-A22193BF",
+        "INV-A7BD50A3"
+      ],
+      "expected_amount_minor": 2393074,
+      "currency": "USD",
+      "evidence_sets": [
+        [
+          "D-44B7D379E1",
+          "D-6FA52819A9"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-20860219",
+      "type": "missing_or_partial_allocation",
+      "affected_ids": [
+        "INV-DA240F42",
+        "PAY-4C3BE7C6"
+      ],
+      "expected_amount_minor": 605807,
+      "currency": "USD",
+      "evidence_sets": [
+        [
+          "D-ED0C6E6E55"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-658B52E2",
+      "type": "wrong_fx_date_or_rate",
+      "affected_ids": [
+        "INV-EAE5515D"
+      ],
+      "expected_amount_minor": 7929,
+      "currency": "USD",
+      "evidence_sets": [
+        [
+          "D-34781A821D",
+          "FX:2023-03-25:SEK:USD",
+          "L-F1B44BB2"
+        ],
+        [
+          "D-34781A821D",
+          "FX:2023-03-25:SEK:USD",
+          "L-1E730BE6"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-C9B863DD",
+      "type": "period_misattribution",
+      "affected_ids": [
+        "INV-74A8924C"
+      ],
+      "expected_amount_minor": 697459,
+      "currency": "USD",
+      "evidence_sets": [
+        [
+          "D-4555A830A1",
+          "L-54079C6B"
+        ],
+        [
+          "D-4555A830A1",
+          "L-85702D41"
+        ]
+      ],
+      "scenario": "single"
+    }
+  ]
+}

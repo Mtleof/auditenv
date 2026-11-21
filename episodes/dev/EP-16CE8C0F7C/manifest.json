@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "env_version": "1.0.0",
+  "generator_version": "1.0.0",
+  "config_version": "1.0.0",
+  "episode_id": "EP-16CE8C0F7C",
+  "company_id": "CO-3CB571",
+  "base_currency": "SEK",
+  "currency_exponents": {
+    "EUR": 2,
+    "GBP": 2,
+    "SEK": 2
+  },
+  "period_start": "2026-09-01",
+  "period_end": "2026-09-30",
+  "timezone": "+05:30",
+  "counts": {
+    "ledger_rows": 262,
+    "invoices": 42,
+    "payments": 36,
+    "documents": 78,
+    "fx_rates": 108
+  },
+  "rounding": {
+    "mode": "ROUND_HALF_EVEN",
+    "unit": "target currency minor unit",
+    "applied": "once per ledger row"
+  },
+  "csv_null": "empty field",
+  "files": [
+    "manifest.json",
+    "ledger.csv",
+    "invoices.jsonl",
+    "payments.jsonl",
+    "fx.csv",
+    "policy.json"
+  ]
+}

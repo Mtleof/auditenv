@@ -1,0 +1,50 @@
+{
+  "config_version": "1.0.0",
+  "n_customers": [
+    6,
+    18
+  ],
+  "n_invoices": [
+    24,
+    60
+  ],
+  "ledger_rows": [
+    200,
+    700
+  ],
+  "foreign_share_pct": 35,
+  "errors": {
+    "duplicate_invoice": {
+      "enabled": true,
+      "count": 1
+    },
+    "missing_or_partial_allocation": {
+      "enabled": true,
+      "count": 1
+    },
+    "wrong_fx_date_or_rate": {
+      "enabled": true,
+      "count": 1
+    },
+    "period_misattribution": {
+      "enabled": true,
+      "count": 1
+    }
+  },
+  "interactions": {
+    "fx_partial_boundary": 0,
+    "duplicate_cross_period": 0
+  },
+  "distractors": {
+    "split_payments": 2,
+    "multi_invoice_payments": 1,
+    "refunds": 1,
+    "recurring": 1,
+    "same_amount_other_entity": 1,
+    "tz_boundary": 2,
+    "prior_period_invoices": 3,
+    "next_period_invoices": 2,
+    "legit_partial": 2
+  },
+  "row_order": "chronological"
+}

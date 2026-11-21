@@ -1,0 +1,186 @@
+{
+  "episode_id": "EP-7AEF0DA57F",
+  "issues": [
+    {
+      "issue_id": "ISS-F5A03797",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-29EE087F",
+        "INV-C1E52022"
+      ],
+      "expected_amount_minor": 272854,
+      "currency": "CHF",
+      "evidence_sets": [
+        [
+          "D-F85E8FB5BE",
+          "D-FC9F343290"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-91BD6EF7",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-01124E35",
+        "INV-ED7DFB48"
+      ],
+      "expected_amount_minor": 262772,
+      "currency": "JPY",
+      "evidence_sets": [
+        [
+          "D-467190130D",
+          "D-94C487C69A"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-813C95AE",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-31B7F071",
+        "INV-9CFE2196"
+      ],
+      "expected_amount_minor": 1099462,
+      "currency": "CHF",
+      "evidence_sets": [
+        [
+          "D-15F8C291BC",
+          "D-A0EA818FD3"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-7616A770",
+      "type": "missing_or_partial_allocation",
+      "affected_ids": [
+        "PAY-79306AF9"
+      ],
+      "expected_amount_minor": 582016,
+      "currency": "CHF",
+      "evidence_sets": [
+        [
+          "D-72B4E17DB3"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-6C2808BC",
+      "type": "missing_or_partial_allocation",
+      "affected_ids": [
+        "PAY-9ED06D86"
+      ],
+      "expected_amount_minor": 90300,
+      "currency": "JPY",
+      "evidence_sets": [
+        [
+          "D-5EF98769A0"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-ED6C758D",
+      "type": "missing_or_partial_allocation",
+      "affected_ids": [
+        "INV-33577544",
+        "PAY-1AB8DD8A"
+      ],
+      "expected_amount_minor": 398572,
+      "currency": "CHF",
+      "evidence_sets": [
+        [
+          "D-EE36E13FC6"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-AE658900",
+      "type": "wrong_fx_date_or_rate",
+      "affected_ids": [
+        "INV-235E012C"
+      ],
+      "expected_amount_minor": 4344,
+      "currency": "JPY",
+      "evidence_sets": [
+        [
+          "D-1E0778E8A5",
+          "FX:2023-01-01:CHF:JPY",
+          "L-1EFF2022"
+        ],
+        [
+          "D-1E0778E8A5",
+          "FX:2023-01-01:CHF:JPY",
+          "L-7FF534E9"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-0E170F9A",
+      "type": "wrong_fx_date_or_rate",
+      "affected_ids": [
+        "PAY-0A038BBC"
+      ],
+      "expected_amount_minor": 131911,
+      "currency": "JPY",
+      "evidence_sets": [
+        [
+          "D-23846F5020",
+          "FX:2023-01-01:CHF:JPY",
+          "L-5AA10866"
+        ],
+        [
+          "D-23846F5020",
+          "FX:2023-01-01:CHF:JPY",
+          "L-516B9737"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-A948F19C",
+      "type": "period_misattribution",
+      "affected_ids": [
+        "INV-595974EA"
+      ],
+      "expected_amount_minor": 6546120,
+      "currency": "JPY",
+      "evidence_sets": [
+        [
+          "D-B65CF22A03",
+          "L-9DDF4393"
+        ],
+        [
+          "D-B65CF22A03",
+          "L-83402A2A"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-BB77E881",
+      "type": "period_misattribution",
+      "affected_ids": [
+        "INV-F20572EC"
+      ],
+      "expected_amount_minor": 3667840,
+      "currency": "JPY",
+      "evidence_sets": [
+        [
+          "D-383ADD53F4",
+          "L-EB903427"
+        ],
+        [
+          "D-383ADD53F4",
+          "L-B4BB9D0A"
+        ]
+      ],
+      "scenario": "single"
+    }
+  ]
+}

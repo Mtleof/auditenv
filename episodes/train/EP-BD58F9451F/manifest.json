@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "env_version": "1.0.0",
+  "generator_version": "1.0.0",
+  "config_version": "1.0.0",
+  "episode_id": "EP-BD58F9451F",
+  "company_id": "CO-858FE3",
+  "base_currency": "GBP",
+  "currency_exponents": {
+    "EUR": 2,
+    "GBP": 2
+  },
+  "period_start": "2023-10-01",
+  "period_end": "2023-10-31",
+  "timezone": "+03:00",
+  "counts": {
+    "ledger_rows": 966,
+    "invoices": 43,
+    "payments": 37,
+    "documents": 80,
+    "fx_rates": 55
+  },
+  "rounding": {
+    "mode": "ROUND_HALF_EVEN",
+    "unit": "target currency minor unit",
+    "applied": "once per ledger row"
+  },
+  "csv_null": "empty field",
+  "files": [
+    "manifest.json",
+    "ledger.csv",
+    "invoices.jsonl",
+    "payments.jsonl",
+    "fx.csv",
+    "policy.json"
+  ]
+}

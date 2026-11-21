@@ -1,0 +1,173 @@
+{
+  "generator_version": "1.0.0",
+  "config_version": "1.0.0",
+  "config_hash": "c0179a0e447c3f11",
+  "seed": 6140988,
+  "attempt": 0,
+  "config": {
+    "config_version": "1.0.0",
+    "n_customers": [
+      6,
+      18
+    ],
+    "n_invoices": [
+      24,
+      60
+    ],
+    "ledger_rows": [
+      200,
+      700
+    ],
+    "foreign_share_pct": 35,
+    "errors": {
+      "duplicate_invoice": {
+        "enabled": false,
+        "count": 0
+      },
+      "missing_or_partial_allocation": {
+        "enabled": false,
+        "count": 0
+      },
+      "wrong_fx_date_or_rate": {
+        "enabled": false,
+        "count": 0
+      },
+      "period_misattribution": {
+        "enabled": false,
+        "count": 0
+      }
+    },
+    "interactions": {
+      "fx_partial_boundary": 1,
+      "duplicate_cross_period": 0
+    },
+    "distractors": {
+      "split_payments": 2,
+      "multi_invoice_payments": 1,
+      "refunds": 1,
+      "recurring": 1,
+      "same_amount_other_entity": 1,
+      "tz_boundary": 2,
+      "prior_period_invoices": 3,
+      "next_period_invoices": 2,
+      "legit_partial": 2
+    },
+    "row_order": "chronological"
+  },
+  "clean_public_sha256": {
+    "manifest.json": "c9ad3f0c9cc82f1d7f65312126b9724af26efe8b1de4365ad259e9dc545f39c8",
+    "ledger.csv": "18983ea89b33606f5253808541a2bca4949debd4224560f9dd1a1a4136cf8565",
+    "invoices.jsonl": "c4ebf7b427143fca889ec8dd4ed4afc02a327153ba95443b64e7b2b3668fc4a5",
+    "payments.jsonl": "fb16782dc99c390c163dcc6166c715ada9681914c1268ac606fa4bb5ad65307b",
+    "fx.csv": "656bb4707aea7fa1bc640fbafb0b490bb9e263da1affed212b969d1dea1d966e",
+    "policy.json": "085ae17e37c35af438439495b894c1a06b51b9dfa89e9daf0bc8ea814b05d322"
+  },
+  "distractors": [
+    {
+      "kind": "split_payment",
+      "invoice": "INV-AEC5D612",
+      "payments": [
+        "PAY-7D5AAEEE",
+        "PAY-4B650195"
+      ]
+    },
+    {
+      "kind": "split_payment",
+      "invoice": "INV-A36866D2",
+      "payments": [
+        "PAY-1133E328",
+        "PAY-44564840"
+      ]
+    },
+    {
+      "kind": "legit_partial_payment",
+      "invoice": "INV-4ADEF25D",
+      "payment": "PAY-0E166521"
+    },
+    {
+      "kind": "legit_partial_payment",
+      "invoice": "INV-145C703D",
+      "payment": "PAY-09F921BE"
+    },
+    {
+      "kind": "multi_invoice_payment",
+      "invoices": [
+        "INV-957D63E3",
+        "INV-5B59BF53"
+      ],
+      "payment": "PAY-97C94002"
+    },
+    {
+      "kind": "refund",
+      "invoice": "INV-1E323382",
+      "payments": [
+        "PAY-A3FF331D",
+        "PAY-63DA61F8",
+        "PAY-5789BB61"
+      ]
+    },
+    {
+      "kind": "recurring_amount",
+      "entity": "C-F9C064"
+    },
+    {
+      "kind": "same_items_other_entity",
+      "invoices": [
+        "INV-16C405E6",
+        "INV-24BA5E99"
+      ]
+    },
+    {
+      "kind": "tz_boundary",
+      "invoice": "INV-0A6D5BCC",
+      "side": "start"
+    },
+    {
+      "kind": "tz_boundary",
+      "invoice": "INV-D09D0EF4",
+      "side": "start"
+    },
+    {
+      "kind": "prior_period_invoice",
+      "invoice": "INV-C4516581"
+    },
+    {
+      "kind": "prior_period_invoice",
+      "invoice": "INV-00BF1FE2"
+    },
+    {
+      "kind": "prior_period_invoice",
+      "invoice": "INV-D51D2648"
+    }
+  ],
+  "mutations": [
+    {
+      "op": "alter_payment_allocation",
+      "variant": "partial",
+      "issue_id": "ISS-72E92270",
+      "payment": "PAY-EE2C0A2C",
+      "refs_before": [
+        {
+          "invoice_id": "INV-E84FF27D",
+          "amount_minor": 809116
+        }
+      ],
+      "refs_after": [
+        {
+          "invoice_id": "INV-E84FF27D",
+          "amount_minor": 582563
+        }
+      ]
+    },
+    {
+      "op": "rebook_with_wrong_fx",
+      "variant": "wrong_date",
+      "issue_id": "ISS-B1133B12",
+      "document": "PAY-EE2C0A2C",
+      "correct_rate": "0.78267485",
+      "correct_date": "2024-05-01",
+      "used_rate": "0.77661723",
+      "used_date": "2024-04-30"
+    }
+  ]
+}

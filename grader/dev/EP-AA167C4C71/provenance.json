@@ -1,0 +1,248 @@
+{
+  "generator_version": "1.0.0",
+  "config_version": "1.0.0",
+  "config_hash": "31f13f5800793744",
+  "seed": 2236067,
+  "attempt": 0,
+  "config": {
+    "config_version": "1.0.0",
+    "n_customers": [
+      6,
+      18
+    ],
+    "n_invoices": [
+      24,
+      60
+    ],
+    "ledger_rows": [
+      200,
+      700
+    ],
+    "foreign_share_pct": 35,
+    "errors": {
+      "duplicate_invoice": {
+        "enabled": false,
+        "count": 0
+      },
+      "missing_or_partial_allocation": {
+        "enabled": true,
+        "count": 1
+      },
+      "wrong_fx_date_or_rate": {
+        "enabled": true,
+        "count": 1
+      },
+      "period_misattribution": {
+        "enabled": true,
+        "count": 1
+      }
+    },
+    "interactions": {
+      "fx_partial_boundary": 1,
+      "duplicate_cross_period": 2
+    },
+    "distractors": {
+      "split_payments": 2,
+      "multi_invoice_payments": 1,
+      "refunds": 1,
+      "recurring": 1,
+      "same_amount_other_entity": 1,
+      "tz_boundary": 2,
+      "prior_period_invoices": 3,
+      "next_period_invoices": 2,
+      "legit_partial": 2
+    },
+    "row_order": "chronological"
+  },
+  "clean_public_sha256": {
+    "manifest.json": "4af6b7a61b9132bb1ab7e26ca4cdf179bb73d91a4542c608a91a51106a5c9791",
+    "ledger.csv": "8c309f5d97a1ad700ec6465ba2f083879a7c343ae5d47f4a42c20230f21c5aaa",
+    "invoices.jsonl": "5f1ffb3150f2ecff60a4f840cdaaa7a70c642fd2a71f59e0b4ff92069db9d560",
+    "payments.jsonl": "4575deb37304ea449807c1b6d4bd13cdf638ed86a1a986524c0551395c9932cb",
+    "fx.csv": "ea0c8602813a5880bc0b35026dc74710c00c19985c2aa5674e7895d3f8a7170a",
+    "policy.json": "865c58080200f5bb466c439cfc5fd648ebe0c5d9a129da275bc611d61a006c32"
+  },
+  "distractors": [
+    {
+      "kind": "split_payment",
+      "invoice": "INV-B8590FB4",
+      "payments": [
+        "PAY-2B0929CE",
+        "PAY-ADC510B1"
+      ]
+    },
+    {
+      "kind": "split_payment",
+      "invoice": "INV-6AB84296",
+      "payments": [
+        "PAY-9DCDFAB8",
+        "PAY-667CFCA3"
+      ]
+    },
+    {
+      "kind": "legit_partial_payment",
+      "invoice": "INV-7FCFD1F7",
+      "payment": "PAY-EFB20CFD"
+    },
+    {
+      "kind": "legit_partial_payment",
+      "invoice": "INV-6ADEB078",
+      "payment": "PAY-72C16853"
+    },
+    {
+      "kind": "multi_invoice_payment",
+      "invoices": [
+        "INV-7F626F75",
+        "INV-D9823698"
+      ],
+      "payment": "PAY-9B8498E4"
+    },
+    {
+      "kind": "refund",
+      "invoice": "INV-A50C0FD9",
+      "payments": [
+        "PAY-DEC2B026",
+        "PAY-946D2D51",
+        "PAY-E5823381"
+      ]
+    },
+    {
+      "kind": "recurring_amount",
+      "entity": "C-711291"
+    },
+    {
+      "kind": "same_items_other_entity",
+      "invoices": [
+        "INV-2CEAECF1",
+        "INV-47FF3F5B"
+      ]
+    },
+    {
+      "kind": "tz_boundary",
+      "invoice": "INV-2A942CF7",
+      "side": "start"
+    },
+    {
+      "kind": "tz_boundary",
+      "invoice": "INV-7DABCC88",
+      "side": "start"
+    },
+    {
+      "kind": "prior_period_invoice",
+      "invoice": "INV-007A6EE7"
+    },
+    {
+      "kind": "prior_period_invoice",
+      "invoice": "INV-5324F50F"
+    },
+    {
+      "kind": "prior_period_invoice",
+      "invoice": "INV-9DFE675B"
+    }
+  ],
+  "mutations": [
+    {
+      "op": "alter_payment_allocation",
+      "variant": "partial",
+      "issue_id": "ISS-62D16951",
+      "payment": "PAY-18E171D7",
+      "refs_before": [
+        {
+          "invoice_id": "INV-1E682FAB",
+          "amount_minor": 1817262
+        }
+      ],
+      "refs_after": [
+        {
+          "invoice_id": "INV-1E682FAB",
+          "amount_minor": 890458
+        }
+      ]
+    },
+    {
+      "op": "rebook_with_wrong_fx",
+      "variant": "wrong_date",
+      "issue_id": "ISS-C2807F2E",
+      "document": "PAY-18E171D7",
+      "correct_rate": "0.75772035",
+      "correct_date": "2024-08-01",
+      "used_rate": "0.75568002",
+      "used_date": "2024-07-31"
+    },
+    {
+      "op": "insert_duplicate_invoice",
+      "issue_id": "ISS-CEBF112F",
+      "source_invoice": "INV-E14C05B5",
+      "duplicate_invoice": "INV-F144B205",
+      "duplicate_doc": "D-4274F93A12"
+    },
+    {
+      "op": "book_out_of_period_invoice",
+      "variant": "true_timestamp",
+      "issue_id": "ISS-35BF433F",
+      "invoice": "INV-F144B205",
+      "ledger_rows_added": [
+        "L-B949A6F4",
+        "L-4746495F"
+      ],
+      "ledger_timestamp": "2024-09-02T14:08:00+01:00"
+    },
+    {
+      "op": "insert_duplicate_invoice",
+      "issue_id": "ISS-491CE983",
+      "source_invoice": "INV-87B13C66",
+      "duplicate_invoice": "INV-43870B80",
+      "duplicate_doc": "D-718F4CC521"
+    },
+    {
+      "op": "book_out_of_period_invoice",
+      "variant": "backdated",
+      "issue_id": "ISS-7E0D44BA",
+      "invoice": "INV-43870B80",
+      "ledger_rows_added": [
+        "L-0F53C37B",
+        "L-7E694794"
+      ],
+      "ledger_timestamp": "2024-08-31T23:37:00+01:00"
+    },
+    {
+      "op": "alter_payment_allocation",
+      "variant": "partial",
+      "issue_id": "ISS-B121917D",
+      "payment": "PAY-F718777B",
+      "refs_before": [
+        {
+          "invoice_id": "INV-A02ECB0B",
+          "amount_minor": 596784
+        }
+      ],
+      "refs_after": [
+        {
+          "invoice_id": "INV-A02ECB0B",
+          "amount_minor": 447588
+        }
+      ]
+    },
+    {
+      "op": "rebook_with_wrong_fx",
+      "variant": "wrong_date",
+      "issue_id": "ISS-12D39A49",
+      "document": "INV-8509A683",
+      "correct_rate": "0.76828355",
+      "correct_date": "2024-08-10",
+      "used_rate": "0.76400512",
+      "used_date": "2024-08-09"
+    },
+    {
+      "op": "book_out_of_period_invoice",
+      "variant": "backdated",
+      "issue_id": "ISS-78C46F2C",
+      "invoice": "INV-B18883CD",
+      "ledger_rows_added": [
+        "L-E315C1E9",
+        "L-86CFB38F"
+      ],
+      "ledger_timestamp": "2024-08-31T20:02:00+01:00"
+    }
+  ]
+}

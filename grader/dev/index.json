@@ -1,0 +1,294 @@
+[
+  {
+    "name": "dev-01",
+    "episode_id": "EP-A6E3BD8C40",
+    "seed": 6021023,
+    "category": "clean",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": false,
+          "count": 0
+        },
+        "missing_or_partial_allocation": {
+          "enabled": false,
+          "count": 0
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": false,
+          "count": 0
+        },
+        "period_misattribution": {
+          "enabled": false,
+          "count": 0
+        }
+      }
+    }
+  },
+  {
+    "name": "dev-02",
+    "episode_id": "EP-3C3CA508AD",
+    "seed": 4669201,
+    "category": "clean",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": false,
+          "count": 0
+        },
+        "missing_or_partial_allocation": {
+          "enabled": false,
+          "count": 0
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": false,
+          "count": 0
+        },
+        "period_misattribution": {
+          "enabled": false,
+          "count": 0
+        }
+      },
+      "n_invoices": [
+        80,
+        95
+      ],
+      "ledger_rows": [
+        1500,
+        1800
+      ],
+      "foreign_share_pct": 60
+    }
+  },
+  {
+    "name": "dev-03",
+    "episode_id": "EP-353FF794BA",
+    "seed": 1414213,
+    "category": "interaction",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": false,
+          "count": 0
+        },
+        "missing_or_partial_allocation": {
+          "enabled": false,
+          "count": 0
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": false,
+          "count": 0
+        },
+        "period_misattribution": {
+          "enabled": false,
+          "count": 0
+        }
+      },
+      "interactions": {
+        "fx_partial_boundary": 1,
+        "duplicate_cross_period": 1
+      }
+    }
+  },
+  {
+    "name": "dev-04",
+    "episode_id": "EP-CC170FE47C",
+    "seed": 1732050,
+    "category": "interaction",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": true,
+          "count": 1
+        },
+        "missing_or_partial_allocation": {
+          "enabled": true,
+          "count": 1
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": false,
+          "count": 0
+        },
+        "period_misattribution": {
+          "enabled": false,
+          "count": 0
+        }
+      },
+      "interactions": {
+        "fx_partial_boundary": 2,
+        "duplicate_cross_period": 0
+      }
+    }
+  },
+  {
+    "name": "dev-05",
+    "episode_id": "EP-AA167C4C71",
+    "seed": 2236067,
+    "category": "interaction",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": false,
+          "count": 0
+        },
+        "missing_or_partial_allocation": {
+          "enabled": true,
+          "count": 1
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": true,
+          "count": 1
+        },
+        "period_misattribution": {
+          "enabled": true,
+          "count": 1
+        }
+      },
+      "interactions": {
+        "fx_partial_boundary": 1,
+        "duplicate_cross_period": 2
+      }
+    }
+  },
+  {
+    "name": "dev-06",
+    "episode_id": "EP-77EE9BEDD2",
+    "seed": 5772156,
+    "category": "mixed",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": true,
+          "count": 1
+        },
+        "missing_or_partial_allocation": {
+          "enabled": true,
+          "count": 1
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": true,
+          "count": 1
+        },
+        "period_misattribution": {
+          "enabled": true,
+          "count": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "dev-07",
+    "episode_id": "EP-D51311F08A",
+    "seed": 6931471,
+    "category": "mixed",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": true,
+          "count": 2
+        },
+        "missing_or_partial_allocation": {
+          "enabled": true,
+          "count": 2
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": true,
+          "count": 2
+        },
+        "period_misattribution": {
+          "enabled": true,
+          "count": 2
+        }
+      },
+      "ledger_rows": [
+        1950,
+        2000
+      ],
+      "n_invoices": [
+        90,
+        100
+      ]
+    }
+  },
+  {
+    "name": "dev-08",
+    "episode_id": "EP-16CE8C0F7C",
+    "seed": 3010299,
+    "category": "mixed",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": false,
+          "count": 0
+        },
+        "missing_or_partial_allocation": {
+          "enabled": true,
+          "count": 3
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": false,
+          "count": 0
+        },
+        "period_misattribution": {
+          "enabled": false,
+          "count": 0
+        }
+      },
+      "foreign_share_pct": 0
+    }
+  },
+  {
+    "name": "dev-09",
+    "episode_id": "EP-2791EAA748",
+    "seed": 4771212,
+    "category": "mixed",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": false,
+          "count": 0
+        },
+        "missing_or_partial_allocation": {
+          "enabled": false,
+          "count": 0
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": true,
+          "count": 3
+        },
+        "period_misattribution": {
+          "enabled": true,
+          "count": 3
+        }
+      },
+      "foreign_share_pct": 90
+    }
+  },
+  {
+    "name": "dev-10",
+    "episode_id": "EP-B189A45009",
+    "seed": 8450980,
+    "category": "mixed",
+    "config": {
+      "errors": {
+        "duplicate_invoice": {
+          "enabled": true,
+          "count": 1
+        },
+        "missing_or_partial_allocation": {
+          "enabled": false,
+          "count": 0
+        },
+        "wrong_fx_date_or_rate": {
+          "enabled": false,
+          "count": 0
+        },
+        "period_misattribution": {
+          "enabled": false,
+          "count": 0
+        }
+      },
+      "row_order": "shuffled"
+    }
+  }
+]

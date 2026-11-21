@@ -1,0 +1,184 @@
+{
+  "generator_version": "1.0.0",
+  "config_version": "1.0.0",
+  "config_hash": "46ce2dc574acfa71",
+  "seed": 9031777,
+  "attempt": 0,
+  "config": {
+    "config_version": "1.0.0",
+    "n_customers": [
+      6,
+      18
+    ],
+    "n_invoices": [
+      24,
+      60
+    ],
+    "ledger_rows": [
+      200,
+      700
+    ],
+    "foreign_share_pct": 35,
+    "errors": {
+      "duplicate_invoice": {
+        "enabled": true,
+        "count": 1
+      },
+      "missing_or_partial_allocation": {
+        "enabled": false,
+        "count": 0
+      },
+      "wrong_fx_date_or_rate": {
+        "enabled": true,
+        "count": 1
+      },
+      "period_misattribution": {
+        "enabled": false,
+        "count": 0
+      }
+    },
+    "interactions": {
+      "fx_partial_boundary": 0,
+      "duplicate_cross_period": 1
+    },
+    "distractors": {
+      "split_payments": 2,
+      "multi_invoice_payments": 1,
+      "refunds": 1,
+      "recurring": 1,
+      "same_amount_other_entity": 1,
+      "tz_boundary": 2,
+      "prior_period_invoices": 3,
+      "next_period_invoices": 2,
+      "legit_partial": 2
+    },
+    "row_order": "chronological"
+  },
+  "clean_public_sha256": {
+    "manifest.json": "bcc192312af3a3e9a9b293909ec1225f42c2d0d0a124a80f87939d6bbe23a064",
+    "ledger.csv": "734eb5b51dac31852ac8825d22146f40abe512e2bc42a088718ef6973876b598",
+    "invoices.jsonl": "d173a87a21012dcb09b4579300ee02cf3326456a8b2c2313c7bf82efde1b1593",
+    "payments.jsonl": "d76f8526f68b3d3416f2586158d520efe5a3c93c9117a066b35c36b37c54bcba",
+    "fx.csv": "f371ac735adcced243053befb6890908b088a35f4447590d6f47a031fd0ed85a",
+    "policy.json": "f6845ad5f6a110de62c0b455beee2b3acbbebc4060f457fc826ac268d55a1a2b"
+  },
+  "distractors": [
+    {
+      "kind": "split_payment",
+      "invoice": "INV-19BBC233",
+      "payments": [
+        "PAY-A2EC82E6",
+        "PAY-B4045100"
+      ]
+    },
+    {
+      "kind": "split_payment",
+      "invoice": "INV-61A14DB2",
+      "payments": [
+        "PAY-402E4703",
+        "PAY-5E25608A"
+      ]
+    },
+    {
+      "kind": "legit_partial_payment",
+      "invoice": "INV-03C23BA3",
+      "payment": "PAY-315E307E"
+    },
+    {
+      "kind": "legit_partial_payment",
+      "invoice": "INV-52181B5F",
+      "payment": "PAY-61752509"
+    },
+    {
+      "kind": "multi_invoice_payment",
+      "invoices": [
+        "INV-95DD8DF9",
+        "INV-49474E6D"
+      ],
+      "payment": "PAY-A0C5AB50"
+    },
+    {
+      "kind": "refund",
+      "invoice": "INV-3CD7CF4F",
+      "payments": [
+        "PAY-4DA49771",
+        "PAY-38DDB35E",
+        "PAY-071A4EDC"
+      ]
+    },
+    {
+      "kind": "recurring_amount",
+      "entity": "C-CAF1D6"
+    },
+    {
+      "kind": "same_items_other_entity",
+      "invoices": [
+        "INV-1B2B2AF2",
+        "INV-8DA8E70B"
+      ]
+    },
+    {
+      "kind": "tz_boundary",
+      "invoice": "INV-6F63F79B",
+      "side": "end"
+    },
+    {
+      "kind": "tz_boundary",
+      "invoice": "INV-658316FB",
+      "side": "end"
+    },
+    {
+      "kind": "prior_period_invoice",
+      "invoice": "INV-3678B4A7"
+    },
+    {
+      "kind": "prior_period_invoice",
+      "invoice": "INV-5FA9119F"
+    },
+    {
+      "kind": "prior_period_invoice",
+      "invoice": "INV-A6105EB7"
+    }
+  ],
+  "mutations": [
+    {
+      "op": "insert_duplicate_invoice",
+      "issue_id": "ISS-8551E926",
+      "source_invoice": "INV-1305AF06",
+      "duplicate_invoice": "INV-9CA9377D",
+      "duplicate_doc": "D-26DFF3B460"
+    },
+    {
+      "op": "book_out_of_period_invoice",
+      "variant": "backdated",
+      "issue_id": "ISS-60E3E3F5",
+      "invoice": "INV-9CA9377D",
+      "ledger_rows_added": [
+        "L-47807F72",
+        "L-CB4ED614"
+      ],
+      "ledger_timestamp": "2023-08-31T22:37:00-08:00"
+    },
+    {
+      "op": "insert_duplicate_invoice",
+      "issue_id": "ISS-C9400E56",
+      "source_invoice": "INV-E634D434",
+      "duplicate_invoice": "INV-44FBB29B",
+      "duplicate_doc": "D-D5CC9EBA8A",
+      "ledger_rows_added": [
+        "L-A6A276CA",
+        "L-4B73E4B0"
+      ]
+    },
+    {
+      "op": "rebook_with_wrong_fx",
+      "variant": "wrong_rate",
+      "issue_id": "ISS-4EE39EDF",
+      "document": "PAY-C1867F95",
+      "correct_rate": "11.635865",
+      "correct_date": "2023-08-16",
+      "used_rate": "12.334017",
+      "used_date": null
+    }
+  ]
+}

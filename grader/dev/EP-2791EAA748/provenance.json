@@ -1,0 +1,208 @@
+{
+  "generator_version": "1.0.0",
+  "config_version": "1.0.0",
+  "config_hash": "398047e6d36816dc",
+  "seed": 4771212,
+  "attempt": 0,
+  "config": {
+    "config_version": "1.0.0",
+    "n_customers": [
+      6,
+      18
+    ],
+    "n_invoices": [
+      24,
+      60
+    ],
+    "ledger_rows": [
+      200,
+      700
+    ],
+    "foreign_share_pct": 90,
+    "errors": {
+      "duplicate_invoice": {
+        "enabled": false,
+        "count": 0
+      },
+      "missing_or_partial_allocation": {
+        "enabled": false,
+        "count": 0
+      },
+      "wrong_fx_date_or_rate": {
+        "enabled": true,
+        "count": 3
+      },
+      "period_misattribution": {
+        "enabled": true,
+        "count": 3
+      }
+    },
+    "interactions": {
+      "fx_partial_boundary": 0,
+      "duplicate_cross_period": 0
+    },
+    "distractors": {
+      "split_payments": 2,
+      "multi_invoice_payments": 1,
+      "refunds": 1,
+      "recurring": 1,
+      "same_amount_other_entity": 1,
+      "tz_boundary": 2,
+      "prior_period_invoices": 3,
+      "next_period_invoices": 2,
+      "legit_partial": 2
+    },
+    "row_order": "chronological"
+  },
+  "clean_public_sha256": {
+    "manifest.json": "950dec399e26cb7b10fc6d287fea5ba42e5f7ecff3370b7875ed3c5f5c67b2a3",
+    "ledger.csv": "b8e16963403a00c9992fe153542222b13a9717b5dcd2d90bd935fc268db25ab5",
+    "invoices.jsonl": "4c323683621f87bf715516ec251fe45414855fccd951fed3b3fd31a0210caa9a",
+    "payments.jsonl": "e13c65b277f36c248be361cc28e6259e7eaf5610eb5ba99834a0ff1025642ab0",
+    "fx.csv": "c7fbc0809b17f6a2c6de7710cb14ee0092e94ac56cf5cf7ac82ba840d7d6646d",
+    "policy.json": "d89df28d6a09c4a45c9c3cc85ef7cfb15b48cab52fe74fb0aae8df21ea543d9c"
+  },
+  "distractors": [
+    {
+      "kind": "split_payment",
+      "invoice": "INV-CA39F4F9",
+      "payments": [
+        "PAY-49C24F18",
+        "PAY-AD236CFE"
+      ]
+    },
+    {
+      "kind": "split_payment",
+      "invoice": "INV-8E40FAF7",
+      "payments": [
+        "PAY-F8D6C7C5",
+        "PAY-3A84FD1C"
+      ]
+    },
+    {
+      "kind": "legit_partial_payment",
+      "invoice": "INV-2F4E0637",
+      "payment": "PAY-2D766155"
+    },
+    {
+      "kind": "legit_partial_payment",
+      "invoice": "INV-7A73E435",
+      "payment": "PAY-BF4ADBC5"
+    },
+    {
+      "kind": "multi_invoice_payment",
+      "invoices": [
+        "INV-281DD197",
+        "INV-5C3946DB"
+      ],
+      "payment": "PAY-7AF7C768"
+    },
+    {
+      "kind": "refund",
+      "invoice": "INV-A886DEAE",
+      "payments": [
+        "PAY-FA6BC177",
+        "PAY-CB16D8C3",
+        "PAY-19439F08"
+      ]
+    },
+    {
+      "kind": "recurring_amount",
+      "entity": "C-866A28"
+    },
+    {
+      "kind": "same_items_other_entity",
+      "invoices": [
+        "INV-CE4BAAD8",
+        "INV-E5CA1BDC"
+      ]
+    },
+    {
+      "kind": "tz_boundary",
+      "invoice": "INV-F481B910",
+      "side": "start"
+    },
+    {
+      "kind": "tz_boundary",
+      "invoice": "INV-FDBC8FF5",
+      "side": "start"
+    },
+    {
+      "kind": "prior_period_invoice",
+      "invoice": "INV-C69849C1"
+    },
+    {
+      "kind": "prior_period_invoice",
+      "invoice": "INV-31A6A566"
+    },
+    {
+      "kind": "prior_period_invoice",
+      "invoice": "INV-E8CDEF00"
+    }
+  ],
+  "mutations": [
+    {
+      "op": "rebook_with_wrong_fx",
+      "variant": "wrong_rate",
+      "issue_id": "ISS-731BC351",
+      "document": "PAY-2125B25A",
+      "correct_rate": "0.08403109",
+      "correct_date": "2023-01-26",
+      "used_rate": "0.08151016",
+      "used_date": null
+    },
+    {
+      "op": "rebook_with_wrong_fx",
+      "variant": "wrong_date",
+      "issue_id": "ISS-3C6FF9CD",
+      "document": "INV-FEFA2C00",
+      "correct_rate": "0.08824272",
+      "correct_date": "2023-01-13",
+      "used_rate": "0.08782797",
+      "used_date": "2023-01-14"
+    },
+    {
+      "op": "rebook_with_wrong_fx",
+      "variant": "wrong_date",
+      "issue_id": "ISS-ACCD8B56",
+      "document": "INV-B4F57C8F",
+      "correct_rate": "0.08881026",
+      "correct_date": "2023-01-11",
+      "used_rate": "0.08860600",
+      "used_date": "2023-01-12"
+    },
+    {
+      "op": "book_out_of_period_invoice",
+      "variant": "backdated",
+      "issue_id": "ISS-FD464CF4",
+      "invoice": "INV-E345954D",
+      "ledger_rows_added": [
+        "L-E7862916",
+        "L-5212C6ED"
+      ],
+      "ledger_timestamp": "2023-01-31T15:08:00+09:00"
+    },
+    {
+      "op": "book_out_of_period_invoice",
+      "variant": "true_timestamp",
+      "issue_id": "ISS-C39BD031",
+      "invoice": "INV-F2A0CF44",
+      "ledger_rows_added": [
+        "L-3D81964A",
+        "L-3F3E9BDC"
+      ],
+      "ledger_timestamp": "2023-02-01T09:27:00+09:00"
+    },
+    {
+      "op": "book_out_of_period_invoice",
+      "variant": "backdated",
+      "issue_id": "ISS-407A8B12",
+      "invoice": "INV-0C523443",
+      "ledger_rows_added": [
+        "L-3F130CC9",
+        "L-8D644621"
+      ],
+      "ledger_timestamp": "2023-01-31T15:39:00+09:00"
+    }
+  ]
+}

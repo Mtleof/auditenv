@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "env_version": "1.0.0",
+  "generator_version": "1.0.0",
+  "config_version": "1.0.0",
+  "episode_id": "EP-3B16E0DF9F",
+  "company_id": "CO-CC2680",
+  "base_currency": "EUR",
+  "currency_exponents": {
+    "CHF": 2,
+    "EUR": 2,
+    "GBP": 2
+  },
+  "period_start": "2024-08-01",
+  "period_end": "2024-08-31",
+  "timezone": "+00:00",
+  "counts": {
+    "ledger_rows": 234,
+    "invoices": 31,
+    "payments": 25,
+    "documents": 56,
+    "fx_rates": 110
+  },
+  "rounding": {
+    "mode": "ROUND_HALF_EVEN",
+    "unit": "target currency minor unit",
+    "applied": "once per ledger row"
+  },
+  "csv_null": "empty field",
+  "files": [
+    "manifest.json",
+    "ledger.csv",
+    "invoices.jsonl",
+    "payments.jsonl",
+    "fx.csv",
+    "policy.json"
+  ]
+}

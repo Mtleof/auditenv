@@ -1,0 +1,189 @@
+{
+  "generator_version": "1.0.0",
+  "config_version": "1.0.0",
+  "config_hash": "780134978725a8bf",
+  "seed": 3010299,
+  "attempt": 0,
+  "config": {
+    "config_version": "1.0.0",
+    "n_customers": [
+      6,
+      18
+    ],
+    "n_invoices": [
+      24,
+      60
+    ],
+    "ledger_rows": [
+      200,
+      700
+    ],
+    "foreign_share_pct": 0,
+    "errors": {
+      "duplicate_invoice": {
+        "enabled": false,
+        "count": 0
+      },
+      "missing_or_partial_allocation": {
+        "enabled": true,
+        "count": 3
+      },
+      "wrong_fx_date_or_rate": {
+        "enabled": false,
+        "count": 0
+      },
+      "period_misattribution": {
+        "enabled": false,
+        "count": 0
+      }
+    },
+    "interactions": {
+      "fx_partial_boundary": 0,
+      "duplicate_cross_period": 0
+    },
+    "distractors": {
+      "split_payments": 2,
+      "multi_invoice_payments": 1,
+      "refunds": 1,
+      "recurring": 1,
+      "same_amount_other_entity": 1,
+      "tz_boundary": 2,
+      "prior_period_invoices": 3,
+      "next_period_invoices": 2,
+      "legit_partial": 2
+    },
+    "row_order": "chronological"
+  },
+  "clean_public_sha256": {
+    "manifest.json": "4d6f758b4515be3ad607bdf9b391f35db06183ff47df3694a0d720ad588ee21d",
+    "ledger.csv": "35193d61fa551b426674471d2b3e2cc02e56c8932308de988e2a67fa1528218e",
+    "invoices.jsonl": "c7dfc40c1333ab3fbc5226954be33d259cd420736f1b6a9e0837f5bbca769fa7",
+    "payments.jsonl": "908ce9ddfe25eb5c223ca4f01978b311129f989bbe9b0758401ae60f93813768",
+    "fx.csv": "249ba56f46d950ac0b573e0a16eacde98f21c1c0af82f42a3b9201052ed2cb3a",
+    "policy.json": "42f2c3e8fbb62d9a20afbb35611c2b7e4dbb82a2ce54da8023811d320ee878cc"
+  },
+  "distractors": [
+    {
+      "kind": "split_payment",
+      "invoice": "INV-E8A8EEBC",
+      "payments": [
+        "PAY-790705A7",
+        "PAY-28F3E635"
+      ]
+    },
+    {
+      "kind": "split_payment",
+      "invoice": "INV-3AFC4590",
+      "payments": [
+        "PAY-1772AFB8",
+        "PAY-EDA988FF"
+      ]
+    },
+    {
+      "kind": "legit_partial_payment",
+      "invoice": "INV-4097D8D7",
+      "payment": "PAY-B4F73758"
+    },
+    {
+      "kind": "legit_partial_payment",
+      "invoice": "INV-8359D49C",
+      "payment": "PAY-62FD0B85"
+    },
+    {
+      "kind": "multi_invoice_payment",
+      "invoices": [
+        "INV-CF98F8F6",
+        "INV-69EEAD4F"
+      ],
+      "payment": "PAY-D8B1B77C"
+    },
+    {
+      "kind": "refund",
+      "invoice": "INV-A66470E6",
+      "payments": [
+        "PAY-A65E1D07",
+        "PAY-DCD6B414",
+        "PAY-4FBB1047"
+      ]
+    },
+    {
+      "kind": "recurring_amount",
+      "entity": "C-35D7BC"
+    },
+    {
+      "kind": "same_items_other_entity",
+      "invoices": [
+        "INV-4439FDAB",
+        "INV-2A2E187A"
+      ]
+    },
+    {
+      "kind": "tz_boundary",
+      "invoice": "INV-40A5AF39",
+      "side": "start"
+    },
+    {
+      "kind": "tz_boundary",
+      "invoice": "INV-83E570A9",
+      "side": "start"
+    },
+    {
+      "kind": "prior_period_invoice",
+      "invoice": "INV-8FC9AB5F"
+    },
+    {
+      "kind": "prior_period_invoice",
+      "invoice": "INV-DF1B3B30"
+    },
+    {
+      "kind": "prior_period_invoice",
+      "invoice": "INV-309171DE"
+    }
+  ],
+  "mutations": [
+    {
+      "op": "alter_payment_allocation",
+      "variant": "missing",
+      "issue_id": "ISS-367A2C5A",
+      "payment": "PAY-8715C837",
+      "refs_before": [
+        {
+          "invoice_id": "INV-DFED55CC",
+          "amount_minor": 21079487
+        }
+      ],
+      "refs_after": []
+    },
+    {
+      "op": "alter_payment_allocation",
+      "variant": "partial",
+      "issue_id": "ISS-A0AA39ED",
+      "payment": "PAY-4D7A9811",
+      "refs_before": [
+        {
+          "invoice_id": "INV-22C3CC74",
+          "amount_minor": 19781045
+        }
+      ],
+      "refs_after": [
+        {
+          "invoice_id": "INV-22C3CC74",
+          "amount_minor": 13648921
+        }
+      ]
+    },
+    {
+      "op": "alter_payment_allocation",
+      "variant": "missing",
+      "issue_id": "ISS-21BFFD9B",
+      "payment": "PAY-ECDA8FFF",
+      "refs_before": [
+        {
+          "invoice_id": "INV-0026D76D",
+          "amount_minor": 21521949
+        }
+      ],
+      "refs_after": []
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "policy_version": "1.0.0",
+  "fx": {
+    "rate_source": "fx.csv (one rate per calendar day, source_currency -> target_currency)",
+    "rate_date": "calendar date of the document timestamp (invoice issued_at / payment timestamp) converted to the manifest timezone",
+    "conversion": "base_minor = round(amount_minor / 10**exp(source) * rate * 10**exp(base))",
+    "record_key": "fx records are addressed as FX:<date>:<source_currency>:<target_currency>"
+  },
+  "period": {
+    "start": "2024-05-01",
+    "end": "2024-05-31",
+    "inclusive": true,
+    "timezone": "+09:00",
+    "basis": "document timestamp converted to the manifest timezone",
+    "ledger_scope": "the ledger holds only postings for documents dated inside the period; invoices issued before the period were booked in their own period"
+  },
+  "rounding": {
+    "mode": "ROUND_HALF_EVEN",
+    "unit": "minor unit of the target currency",
+    "applied": "once per ledger row"
+  },
+  "allocation": "every payment must be fully allocated: amount_minor == sum(invoice_refs[].amount_minor); refunds are negative payments with negative allocations",
+  "duplicates": "an invoice duplicates another if entity_id, currency, total_minor and the multiset of line items are identical and issue instants are within 7 days",
+  "chart_of_accounts": {
+    "1000": "Cash",
+    "1200": "Accounts receivable",
+    "2900": "Unapplied cash",
+    "4000": "Revenue",
+    "6100": "Rent",
+    "6200": "Utilities",
+    "6300": "Software",
+    "6400": "Travel",
+    "6500": "Office supplies"
+  },
+  "postings": {
+    "invoice": "Dr 1200 / Cr 4000 (invoice_id set, payment_id null)",
+    "payment": "per allocation Dr 1000 / Cr 1200 (invoice_id = allocated invoice); unallocated remainder Dr 1000 / Cr 2900 (invoice_id null)",
+    "refund": "Dr 1200 / Cr 1000",
+    "currency": "all ledger rows are in the base currency"
+  },
+  "findings": {
+    "duplicate_invoice": {
+      "affected_ids": "both invoice_ids",
+      "amount": "invoice total_minor, invoice currency",
+      "evidence": "doc_ids of both invoices"
+    },
+    "missing_or_partial_allocation": {
+      "affected_ids": "payment_id plus every invoice_id the payment references",
+      "amount": "amount_minor - sum(allocations), payment currency",
+      "evidence": "doc_id of the payment"
+    },
+    "wrong_fx_date_or_rate": {
+      "affected_ids": "the invoice_id or payment_id whose ledger rows use a wrong rate",
+      "amount": "sum over the document's debit rows of |booked - correct|, base currency",
+      "evidence": "doc_id, fx key of the correct rate, and all debit rows (or all credit rows) of the document"
+    },
+    "period_misattribution": {
+      "affected_ids": "invoice_id booked in the wrong period",
+      "amount": "booked debit amount, base currency",
+      "evidence": "doc_id and one ledger row of that booking"
+    },
+    "amount_tolerance_minor": 1
+  }
+}

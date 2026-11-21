@@ -1,0 +1,28 @@
+# virtual environments
+/.venv/
+/venv/
+/env/
+
+# Python caches and build output
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# vendored, hash-pinned test dependencies for the offline build: always keep
+!vendor/wheels/
+!vendor/wheels/*.whl

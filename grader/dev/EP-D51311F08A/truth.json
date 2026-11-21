@@ -1,0 +1,154 @@
+{
+  "episode_id": "EP-D51311F08A",
+  "issues": [
+    {
+      "issue_id": "ISS-31CD850C",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-75D9474D",
+        "INV-EBF9B56D"
+      ],
+      "expected_amount_minor": 1147752,
+      "currency": "USD",
+      "evidence_sets": [
+        [
+          "D-6BB0EC9EF1",
+          "D-CC793946E0"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-1EB96419",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-41E763C6",
+        "INV-DA78D4E4"
+      ],
+      "expected_amount_minor": 7175149,
+      "currency": "USD",
+      "evidence_sets": [
+        [
+          "D-CC29600331",
+          "D-FAD33F3E6C"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-920A1FD5",
+      "type": "missing_or_partial_allocation",
+      "affected_ids": [
+        "PAY-A43D0AE2"
+      ],
+      "expected_amount_minor": 2702848,
+      "currency": "USD",
+      "evidence_sets": [
+        [
+          "D-E67CB0FF2B"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-3D25A125",
+      "type": "missing_or_partial_allocation",
+      "affected_ids": [
+        "INV-FDB9B5C7",
+        "PAY-66FDAA69"
+      ],
+      "expected_amount_minor": 394533,
+      "currency": "EUR",
+      "evidence_sets": [
+        [
+          "D-E064B13A08"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-59FA58FF",
+      "type": "wrong_fx_date_or_rate",
+      "affected_ids": [
+        "PAY-D46128B3"
+      ],
+      "expected_amount_minor": 7107,
+      "currency": "EUR",
+      "evidence_sets": [
+        [
+          "D-9753C32BAA",
+          "FX:2023-04-24:USD:EUR",
+          "L-C2689A5A"
+        ],
+        [
+          "D-9753C32BAA",
+          "FX:2023-04-24:USD:EUR",
+          "L-BB73B8A7"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-79FB6566",
+      "type": "wrong_fx_date_or_rate",
+      "affected_ids": [
+        "PAY-E94C96BC"
+      ],
+      "expected_amount_minor": 91092,
+      "currency": "EUR",
+      "evidence_sets": [
+        [
+          "D-E8DAB2E957",
+          "FX:2023-04-25:CHF:EUR",
+          "L-8196D782"
+        ],
+        [
+          "D-E8DAB2E957",
+          "FX:2023-04-25:CHF:EUR",
+          "L-5E764998"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-F8E2E65A",
+      "type": "period_misattribution",
+      "affected_ids": [
+        "INV-00C4BDBF"
+      ],
+      "expected_amount_minor": 3172150,
+      "currency": "EUR",
+      "evidence_sets": [
+        [
+          "D-14B3578986",
+          "L-961664DE"
+        ],
+        [
+          "D-14B3578986",
+          "L-BB3E30E6"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-5165B541",
+      "type": "period_misattribution",
+      "affected_ids": [
+        "INV-EDD1F479"
+      ],
+      "expected_amount_minor": 54230,
+      "currency": "EUR",
+      "evidence_sets": [
+        [
+          "D-965569B5F1",
+          "L-BCBCFB26"
+        ],
+        [
+          "D-965569B5F1",
+          "L-2F2791CB"
+        ]
+      ],
+      "scenario": "single"
+    }
+  ]
+}

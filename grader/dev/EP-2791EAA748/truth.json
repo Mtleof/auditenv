@@ -1,0 +1,131 @@
+{
+  "episode_id": "EP-2791EAA748",
+  "issues": [
+    {
+      "issue_id": "ISS-731BC351",
+      "type": "wrong_fx_date_or_rate",
+      "affected_ids": [
+        "PAY-2125B25A"
+      ],
+      "expected_amount_minor": 93595,
+      "currency": "CHF",
+      "evidence_sets": [
+        [
+          "D-5ED7DE7D5B",
+          "FX:2023-01-26:SEK:CHF",
+          "L-B653A817"
+        ],
+        [
+          "D-5ED7DE7D5B",
+          "FX:2023-01-26:SEK:CHF",
+          "L-78876466"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-3C6FF9CD",
+      "type": "wrong_fx_date_or_rate",
+      "affected_ids": [
+        "INV-FEFA2C00"
+      ],
+      "expected_amount_minor": 9908,
+      "currency": "CHF",
+      "evidence_sets": [
+        [
+          "D-DC5D9089CD",
+          "FX:2023-01-13:SEK:CHF",
+          "L-2E1E755D"
+        ],
+        [
+          "D-DC5D9089CD",
+          "FX:2023-01-13:SEK:CHF",
+          "L-A2A1E283"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-ACCD8B56",
+      "type": "wrong_fx_date_or_rate",
+      "affected_ids": [
+        "INV-B4F57C8F"
+      ],
+      "expected_amount_minor": 7471,
+      "currency": "CHF",
+      "evidence_sets": [
+        [
+          "D-49E8C6990F",
+          "FX:2023-01-11:SEK:CHF",
+          "L-31BFE30F"
+        ],
+        [
+          "D-49E8C6990F",
+          "FX:2023-01-11:SEK:CHF",
+          "L-8CAB0C62"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-FD464CF4",
+      "type": "period_misattribution",
+      "affected_ids": [
+        "INV-E345954D"
+      ],
+      "expected_amount_minor": 2771728,
+      "currency": "CHF",
+      "evidence_sets": [
+        [
+          "D-94E5F52522",
+          "L-E7862916"
+        ],
+        [
+          "D-94E5F52522",
+          "L-5212C6ED"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-C39BD031",
+      "type": "period_misattribution",
+      "affected_ids": [
+        "INV-F2A0CF44"
+      ],
+      "expected_amount_minor": 1021997,
+      "currency": "CHF",
+      "evidence_sets": [
+        [
+          "D-36EEEDF82E",
+          "L-3D81964A"
+        ],
+        [
+          "D-36EEEDF82E",
+          "L-3F3E9BDC"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-407A8B12",
+      "type": "period_misattribution",
+      "affected_ids": [
+        "INV-0C523443"
+      ],
+      "expected_amount_minor": 3795879,
+      "currency": "CHF",
+      "evidence_sets": [
+        [
+          "D-566CDCDC3B",
+          "L-3F130CC9"
+        ],
+        [
+          "D-566CDCDC3B",
+          "L-8D644621"
+        ]
+      ],
+      "scenario": "single"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "env_version": "1.0.0",
+  "generator_version": "1.0.0",
+  "config_version": "1.0.0",
+  "episode_id": "EP-CC170FE47C",
+  "company_id": "CO-CA21AC",
+  "base_currency": "CHF",
+  "currency_exponents": {
+    "CHF": 2,
+    "EUR": 2
+  },
+  "period_start": "2023-01-01",
+  "period_end": "2023-01-31",
+  "timezone": "-05:00",
+  "counts": {
+    "ledger_rows": 698,
+    "invoices": 62,
+    "payments": 49,
+    "documents": 111,
+    "fx_rates": 55
+  },
+  "rounding": {
+    "mode": "ROUND_HALF_EVEN",
+    "unit": "target currency minor unit",
+    "applied": "once per ledger row"
+  },
+  "csv_null": "empty field",
+  "files": [
+    "manifest.json",
+    "ledger.csv",
+    "invoices.jsonl",
+    "payments.jsonl",
+    "fx.csv",
+    "policy.json"
+  ]
+}

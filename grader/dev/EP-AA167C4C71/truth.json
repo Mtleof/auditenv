@@ -1,0 +1,177 @@
+{
+  "episode_id": "EP-AA167C4C71",
+  "issues": [
+    {
+      "issue_id": "ISS-62D16951",
+      "type": "missing_or_partial_allocation",
+      "affected_ids": [
+        "INV-1E682FAB",
+        "PAY-18E171D7"
+      ],
+      "expected_amount_minor": 926804,
+      "currency": "USD",
+      "evidence_sets": [
+        [
+          "D-77FF01D3CC"
+        ]
+      ],
+      "scenario": "fx_partial_boundary"
+    },
+    {
+      "issue_id": "ISS-C2807F2E",
+      "type": "wrong_fx_date_or_rate",
+      "affected_ids": [
+        "PAY-18E171D7"
+      ],
+      "expected_amount_minor": 3708,
+      "currency": "GBP",
+      "evidence_sets": [
+        [
+          "D-77FF01D3CC",
+          "FX:2024-08-01:USD:GBP",
+          "L-DD7BDBD4",
+          "L-E6F97B70"
+        ],
+        [
+          "D-77FF01D3CC",
+          "FX:2024-08-01:USD:GBP",
+          "L-441D884F",
+          "L-CABAEBAC"
+        ]
+      ],
+      "scenario": "fx_partial_boundary"
+    },
+    {
+      "issue_id": "ISS-CEBF112F",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-E14C05B5",
+        "INV-F144B205"
+      ],
+      "expected_amount_minor": 2707437,
+      "currency": "GBP",
+      "evidence_sets": [
+        [
+          "D-4274F93A12",
+          "D-B0BFB7315F"
+        ]
+      ],
+      "scenario": "duplicate_cross_period"
+    },
+    {
+      "issue_id": "ISS-35BF433F",
+      "type": "period_misattribution",
+      "affected_ids": [
+        "INV-F144B205"
+      ],
+      "expected_amount_minor": 2707437,
+      "currency": "GBP",
+      "evidence_sets": [
+        [
+          "D-4274F93A12",
+          "L-B949A6F4"
+        ],
+        [
+          "D-4274F93A12",
+          "L-4746495F"
+        ]
+      ],
+      "scenario": "duplicate_cross_period"
+    },
+    {
+      "issue_id": "ISS-491CE983",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-43870B80",
+        "INV-87B13C66"
+      ],
+      "expected_amount_minor": 65222,
+      "currency": "USD",
+      "evidence_sets": [
+        [
+          "D-32E7619DDB",
+          "D-718F4CC521"
+        ]
+      ],
+      "scenario": "duplicate_cross_period"
+    },
+    {
+      "issue_id": "ISS-7E0D44BA",
+      "type": "period_misattribution",
+      "affected_ids": [
+        "INV-43870B80"
+      ],
+      "expected_amount_minor": 51749,
+      "currency": "GBP",
+      "evidence_sets": [
+        [
+          "D-718F4CC521",
+          "L-0F53C37B"
+        ],
+        [
+          "D-718F4CC521",
+          "L-7E694794"
+        ]
+      ],
+      "scenario": "duplicate_cross_period"
+    },
+    {
+      "issue_id": "ISS-B121917D",
+      "type": "missing_or_partial_allocation",
+      "affected_ids": [
+        "INV-A02ECB0B",
+        "PAY-F718777B"
+      ],
+      "expected_amount_minor": 149196,
+      "currency": "GBP",
+      "evidence_sets": [
+        [
+          "D-3E4D357ECD"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-12D39A49",
+      "type": "wrong_fx_date_or_rate",
+      "affected_ids": [
+        "INV-8509A683"
+      ],
+      "expected_amount_minor": 8926,
+      "currency": "GBP",
+      "evidence_sets": [
+        [
+          "D-7C2A10CF3F",
+          "FX:2024-08-10:USD:GBP",
+          "L-AD3D1717"
+        ],
+        [
+          "D-7C2A10CF3F",
+          "FX:2024-08-10:USD:GBP",
+          "L-2288F81A"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-78C46F2C",
+      "type": "period_misattribution",
+      "affected_ids": [
+        "INV-B18883CD"
+      ],
+      "expected_amount_minor": 2412847,
+      "currency": "GBP",
+      "evidence_sets": [
+        [
+          "D-A81D27D507",
+          "L-E315C1E9"
+        ],
+        [
+          "D-A81D27D507",
+          "L-86CFB38F"
+        ]
+      ],
+      "scenario": "single"
+    }
+  ]
+}

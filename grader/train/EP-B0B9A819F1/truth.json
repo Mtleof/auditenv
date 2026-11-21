@@ -1,0 +1,117 @@
+{
+  "episode_id": "EP-B0B9A819F1",
+  "issues": [
+    {
+      "issue_id": "ISS-3D15F6EE",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-850663DC",
+        "INV-E1778885"
+      ],
+      "expected_amount_minor": 647676,
+      "currency": "JPY",
+      "evidence_sets": [
+        [
+          "D-CBC3BB77DC",
+          "D-FD26585084"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-55E11619",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-2F322F7E",
+        "INV-61A0B579"
+      ],
+      "expected_amount_minor": 2271280,
+      "currency": "JPY",
+      "evidence_sets": [
+        [
+          "D-316C0CFA37",
+          "D-820ED73A8D"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-D0307129",
+      "type": "missing_or_partial_allocation",
+      "affected_ids": [
+        "INV-7D3500B6",
+        "PAY-3ACC90FC"
+      ],
+      "expected_amount_minor": 2800922,
+      "currency": "JPY",
+      "evidence_sets": [
+        [
+          "D-111916CE8B"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-0C143B10",
+      "type": "wrong_fx_date_or_rate",
+      "affected_ids": [
+        "INV-A97930BD"
+      ],
+      "expected_amount_minor": 2155,
+      "currency": "JPY",
+      "evidence_sets": [
+        [
+          "D-59F06818C2",
+          "FX:2026-09-28:SEK:JPY",
+          "L-39F35E27"
+        ],
+        [
+          "D-59F06818C2",
+          "FX:2026-09-28:SEK:JPY",
+          "L-7309DB15"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-03EBD582",
+      "type": "period_misattribution",
+      "affected_ids": [
+        "INV-BF4184A7"
+      ],
+      "expected_amount_minor": 1699837,
+      "currency": "JPY",
+      "evidence_sets": [
+        [
+          "D-B02FF4C811",
+          "L-C559E728"
+        ],
+        [
+          "D-B02FF4C811",
+          "L-D44E399F"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-4562F04C",
+      "type": "period_misattribution",
+      "affected_ids": [
+        "INV-73104245"
+      ],
+      "expected_amount_minor": 2951014,
+      "currency": "JPY",
+      "evidence_sets": [
+        [
+          "D-F1BE5129D5",
+          "L-10D05447"
+        ],
+        [
+          "D-F1BE5129D5",
+          "L-6B081FAB"
+        ]
+      ],
+      "scenario": "single"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "episode_id": "EP-B189A45009",
+  "issues": [
+    {
+      "issue_id": "ISS-9995B9D2",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-93C40F02",
+        "INV-DB6C95B8"
+      ],
+      "expected_amount_minor": 3792631,
+      "currency": "JPY",
+      "evidence_sets": [
+        [
+          "D-717DE381FA",
+          "D-9E7ACB22D1"
+        ]
+      ],
+      "scenario": "single"
+    }
+  ]
+}

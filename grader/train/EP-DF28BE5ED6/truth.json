@@ -1,0 +1,49 @@
+{
+  "episode_id": "EP-DF28BE5ED6",
+  "issues": [
+    {
+      "issue_id": "ISS-ACD5DB73",
+      "type": "wrong_fx_date_or_rate",
+      "affected_ids": [
+        "INV-6764FC66"
+      ],
+      "expected_amount_minor": 3123,
+      "currency": "GBP",
+      "evidence_sets": [
+        [
+          "D-24BD104CA9",
+          "FX:2024-06-29:SEK:GBP",
+          "L-BFF1281C"
+        ],
+        [
+          "D-24BD104CA9",
+          "FX:2024-06-29:SEK:GBP",
+          "L-99114EF3"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-4C1937D7",
+      "type": "wrong_fx_date_or_rate",
+      "affected_ids": [
+        "INV-FBC2DFFD"
+      ],
+      "expected_amount_minor": 145258,
+      "currency": "GBP",
+      "evidence_sets": [
+        [
+          "D-4E7EF082B4",
+          "FX:2024-06-19:CHF:GBP",
+          "L-E817AEB6"
+        ],
+        [
+          "D-4E7EF082B4",
+          "FX:2024-06-19:CHF:GBP",
+          "L-DB271075"
+        ]
+      ],
+      "scenario": "single"
+    }
+  ]
+}

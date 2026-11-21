@@ -1,0 +1,73 @@
+{
+  "episode_id": "EP-3B16E0DF9F",
+  "issues": [
+    {
+      "issue_id": "ISS-D4F06B43",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-19858420",
+        "INV-78857055"
+      ],
+      "expected_amount_minor": 115499,
+      "currency": "GBP",
+      "evidence_sets": [
+        [
+          "D-86BEDF362D",
+          "D-C126CE4745"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-9E1D40DD",
+      "type": "missing_or_partial_allocation",
+      "affected_ids": [
+        "INV-698CC7FE",
+        "PAY-F8BD8F2B"
+      ],
+      "expected_amount_minor": 1336028,
+      "currency": "EUR",
+      "evidence_sets": [
+        [
+          "D-5D15EC64D7"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-D944C95C",
+      "type": "missing_or_partial_allocation",
+      "affected_ids": [
+        "PAY-8BF4ABB3"
+      ],
+      "expected_amount_minor": 2165946,
+      "currency": "EUR",
+      "evidence_sets": [
+        [
+          "D-9A01679BC7"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-9FEF0BFF",
+      "type": "period_misattribution",
+      "affected_ids": [
+        "INV-039E2A2E"
+      ],
+      "expected_amount_minor": 596167,
+      "currency": "EUR",
+      "evidence_sets": [
+        [
+          "D-9DD6B4B8FD",
+          "L-9C43793D"
+        ],
+        [
+          "D-9DD6B4B8FD",
+          "L-DC02E03F"
+        ]
+      ],
+      "scenario": "single"
+    }
+  ]
+}

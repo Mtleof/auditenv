@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "env_version": "1.0.0",
+  "generator_version": "1.0.0",
+  "config_version": "1.0.0",
+  "episode_id": "EP-B189A45009",
+  "company_id": "CO-6E71EC",
+  "base_currency": "EUR",
+  "currency_exponents": {
+    "EUR": 2,
+    "JPY": 0
+  },
+  "period_start": "2025-10-01",
+  "period_end": "2025-10-31",
+  "timezone": "-05:00",
+  "counts": {
+    "ledger_rows": 458,
+    "invoices": 58,
+    "payments": 43,
+    "documents": 101,
+    "fx_rates": 55
+  },
+  "rounding": {
+    "mode": "ROUND_HALF_EVEN",
+    "unit": "target currency minor unit",
+    "applied": "once per ledger row"
+  },
+  "csv_null": "empty field",
+  "files": [
+    "manifest.json",
+    "ledger.csv",
+    "invoices.jsonl",
+    "payments.jsonl",
+    "fx.csv",
+    "policy.json"
+  ]
+}

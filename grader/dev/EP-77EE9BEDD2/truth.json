@@ -1,0 +1,79 @@
+{
+  "episode_id": "EP-77EE9BEDD2",
+  "issues": [
+    {
+      "issue_id": "ISS-808B45D4",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-DED9E933",
+        "INV-E8674057"
+      ],
+      "expected_amount_minor": 37238,
+      "currency": "JPY",
+      "evidence_sets": [
+        [
+          "D-07349E1339",
+          "D-FB0D2F5DA6"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-A6432111",
+      "type": "missing_or_partial_allocation",
+      "affected_ids": [
+        "PAY-B27BC02C"
+      ],
+      "expected_amount_minor": 362556,
+      "currency": "USD",
+      "evidence_sets": [
+        [
+          "D-BE8584861E"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-68403517",
+      "type": "wrong_fx_date_or_rate",
+      "affected_ids": [
+        "PAY-25364750"
+      ],
+      "expected_amount_minor": 21216,
+      "currency": "JPY",
+      "evidence_sets": [
+        [
+          "D-609E44F7D4",
+          "FX:2023-03-16:SEK:JPY",
+          "L-970AA226"
+        ],
+        [
+          "D-609E44F7D4",
+          "FX:2023-03-16:SEK:JPY",
+          "L-0B908222"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-B1CA1128",
+      "type": "period_misattribution",
+      "affected_ids": [
+        "INV-C0EF8EFF"
+      ],
+      "expected_amount_minor": 3159360,
+      "currency": "JPY",
+      "evidence_sets": [
+        [
+          "D-132342ECA0",
+          "L-CBA2CC86"
+        ],
+        [
+          "D-132342ECA0",
+          "L-5DD2F729"
+        ]
+      ],
+      "scenario": "single"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "episode_id": "EP-16CE8C0F7C",
+  "issues": [
+    {
+      "issue_id": "ISS-367A2C5A",
+      "type": "missing_or_partial_allocation",
+      "affected_ids": [
+        "PAY-8715C837"
+      ],
+      "expected_amount_minor": 21079487,
+      "currency": "SEK",
+      "evidence_sets": [
+        [
+          "D-B4B6DCE5DC"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-A0AA39ED",
+      "type": "missing_or_partial_allocation",
+      "affected_ids": [
+        "INV-22C3CC74",
+        "PAY-4D7A9811"
+      ],
+      "expected_amount_minor": 6132124,
+      "currency": "SEK",
+      "evidence_sets": [
+        [
+          "D-1A6C7239B8"
+        ]
+      ],
+      "scenario": "single"
+    },
+    {
+      "issue_id": "ISS-21BFFD9B",
+      "type": "missing_or_partial_allocation",
+      "affected_ids": [
+        "PAY-ECDA8FFF"
+      ],
+      "expected_amount_minor": 21521949,
+      "currency": "SEK",
+      "evidence_sets": [
+        [
+          "D-3F0DC423DE"
+        ]
+      ],
+      "scenario": "single"
+    }
+  ]
+}
