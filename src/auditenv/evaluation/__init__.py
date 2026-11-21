@@ -7,13 +7,13 @@ import os
 import time
 from collections import defaultdict
 
-from ..env import AuditEnv, EpisodeProvider, GeneratorProvider
+from ..env import AuditEnv, DirectoryProvider, EpisodeProvider, GeneratorProvider
 from ..generator import generate
 from ..generator.episode import dump_json
 from ..generator.transforms import permute, remap_ids
 from ..matcher import canonical_ids
 from ..policies import AGENT_POLICIES, OraclePolicy, RuleBasedPolicy
-from ..policies.worker import RemotePolicy
+from ..policies.worker import AgentTimeout, RemotePolicy
 from ..validator import validate_episode
 from .suite import SUITE, suite
 
@@ -21,44 +21,93 @@ POLICY_ORDER = ("random", "rule_based", "flag_all", "oracle")
 
 
 def run_episode(env, policy, seed, config, on_step=None):
+    """Run one episode. A RemotePolicy gets a hard deadline: if the agent process does not answer before
+    the episode time limit it is killed, and the next env.step() observes the expired clock and
+    truncates the episode with an empty answer."""
     t0 = time.perf_counter()
     obs, info = env.reset(seed, config)
-    policy.reset(obs)
+    deadline = time.monotonic() + env.time_limit_s + 0.5
+    remote = isinstance(policy, RemotePolicy)
+    timed_out = False
+
+    def call(fn, o):
+        return fn(o, timeout=deadline - time.monotonic()) if remote else fn(o)
+
+    failed = False      # a crashed agent process: its episode runs out of steps with an empty answer
+    try:
+        call(policy.reset, obs)
+    except AgentTimeout:
+        timed_out = True
+    except RuntimeError:
+        if not remote:
+            raise
+        failed = True
     if on_step:
         on_step(0, None, obs, 0.0, False, False)
     action = None
     while True:
-        action = policy.act(obs)
+        if not (timed_out or failed):
+            try:
+                action = call(policy.act, obs)
+            except AgentTimeout:
+                timed_out = True
+            except RuntimeError:
+                if not remote:
+                    raise
+                failed = True
+        if timed_out:
+            action = {"action": "agent_timeout"}
+        elif failed:
+            action = {"action": "agent_failed"}
         obs, r, term, trunc, info = env.step(action)
         if on_step:
             on_step(info["steps_used"], action, obs, r, term, trunc)
         if term or trunc:
             break
     return {"steps": info["steps_used"], "seconds": time.perf_counter() - t0, "last_action": action,
-            "visible_reward": r, "terminated": term, "truncated": trunc}
+            "visible_reward": r, "terminated": term, "truncated": trunc, "agent_timeout": timed_out,
+            "agent_failed": failed}
 
 
 def _row(spec, grade, run, policy):
-    return {"policy": policy, "name": spec["name"], "split": spec["split"], "category": spec["category"],
+    return {"policy": policy, "name": spec.get("name", grade["episode_id"]), "split": spec.get("split", "-"),
+            "category": spec.get("category", "custom"),
             "episode_id": grade["episode_id"], "status": grade["status"], "tp": grade["tp"], "fp": grade["fp"],
             "fn": grade["fn"], "precision": grade["precision"], "recall": grade["recall"], "f1": grade["f1"],
             "return": grade["reward"], "steps": run["steps"], "seconds": round(run["seconds"], 4),
             "visible_reward": run["visible_reward"], "experimental": grade["experimental"]}
 
 
-def evaluate_policies(specs=None, policies=POLICY_ORDER) -> list[dict]:
-    """Closed-mode evaluation. Agent policies run in a separate process; the oracle runs evaluator-side."""
+def episode_source(spec):
+    """-> (provider, seed, config, truth). A spec is either {seed, config} (generated) or
+    {episode_dir, grader_dir} (files on disk, possibly transformed by a third party)."""
+    if "episode_dir" in spec:
+        prov = DirectoryProvider([spec["episode_dir"]], [spec["grader_dir"]])
+        return prov, 0, None, prov.load(0)[1]
+    return GeneratorProvider(), spec["seed"], spec.get("config"), None
+
+
+def evaluate_policies(specs=None, policies=POLICY_ORDER, extra_paths=(), time_limit_s=None) -> list[dict]:
+    """Closed-mode evaluation. Every non-oracle policy (built-in name or "module:Class") runs in a separate
+    agent process; the oracle runs evaluator-side with the truth."""
     specs = specs or SUITE
     rows = []
     for name in policies:
-        provider = GeneratorProvider()
-        env = AuditEnv(mode="closed", provider=provider)
-        remote = RemotePolicy(name) if name in AGENT_POLICIES else None
+        remote = None if name == "oracle" else RemotePolicy(name, extra_paths)
         try:
             for spec in specs:
-                pol = remote or OraclePolicy(generate(spec["seed"], spec["config"]).truth)
-                run = run_episode(env, pol, spec["seed"], spec["config"])
-                rows.append(_row(spec, provider.log[-1], run, name))
+                provider, seed, config, truth = episode_source(spec)
+                kw = {} if time_limit_s is None else {"time_limit_s": time_limit_s}
+                env = AuditEnv(mode="closed", provider=provider, **kw)
+                if remote is None:
+                    truth = truth or generate(seed, config).truth
+                    pol = OraclePolicy(truth)
+                else:
+                    pol = remote
+                run = run_episode(env, pol, seed, config)
+                row = _row(spec, provider.log[-1], run, name)
+                row["agent_timeout"] = run["agent_timeout"]
+                rows.append(row)
         finally:
             if remote:
                 remote.close()
@@ -113,12 +162,12 @@ def paired_checks(specs=None) -> list[dict]:
 
 def summarize(rows: list[dict]) -> dict:
     out = {}
-    for name in POLICY_ORDER:
+    names = list(dict.fromkeys(r["policy"] for r in rows))
+    cats = list(dict.fromkeys(r["category"] for r in rows))
+    for name in names:
         rs = [r for r in rows if r["policy"] == name]
-        if not rs:
-            continue
         groups = {"all": rs}
-        for cat in ("clean", "interaction", "mixed"):
+        for cat in cats:
             groups[cat] = [r for r in rs if r["category"] == cat]
         out[name] = {}
         for g, sub in groups.items():
@@ -142,13 +191,19 @@ def summarize(rows: list[dict]) -> dict:
     return out
 
 
-def render_markdown(summary, rows, pairs) -> str:
-    L = ["# auditenv baseline report", "",
-         "Closed-mode evaluation on 20 episodes (10 train + 10 dev: 5 clean, 5 with interacting errors, 10 mixed).",
+BUILTIN_TITLE = ("Closed-mode evaluation on 20 episodes (10 train + 10 dev: 5 clean, 5 with interacting errors, "
+                 "10 mixed).")
+
+
+def render_markdown(summary, rows, pairs, title=BUILTIN_TITLE) -> str:
+    """title=None -> generic title for a custom suite."""
+    eps = len({r["episode_id"] for r in rows})
+    cats = list(dict.fromkeys(r["category"] for r in rows))
+    L = ["# auditenv baseline report", "", title if title else f"Closed-mode evaluation on {eps} episodes.",
          "Return = clip(2*F1 - 1 - 0.002*inspection_steps, -1, 1). P/R/F1 are micro-averaged over episodes;",
          "`F1 mean` is the per-episode average. The experimental partial-credit F1 (type + ids only, no evidence)",
          "is reported separately and is NOT part of the reward.", ""]
-    for g in ("all", "clean", "interaction", "mixed"):
+    for g in ["all", *cats]:
         L += [f"## {g}", "", "| policy | P | R | F1 | F1 mean | return | steps | time s (mean/max) | exp. partial F1 |",
               "|---|---|---|---|---|---|---|---|---|"]
         for name, s in summary.items():
@@ -163,6 +218,8 @@ def render_markdown(summary, rows, pairs) -> str:
     for r in rows:
         L.append(f"| {r['policy']} | {r['name']} | {r['category']} | {r['tp']} | {r['fp']} | {r['fn']} | "
                  f"{r['f1']:.3f} | {r['return']:+.3f} | {r['steps']} |")
+    if not pairs:
+        return "\n".join(L) + "\n"
     passed = sum(p["passed"] for p in pairs)
     L += ["", f"## Paired checks: {passed}/{len(pairs)} passed", "",
           "| episode | transform | validator | oracle reward equal | rule-based reward equal | rule-based answer equal |",

@@ -12,8 +12,8 @@
         "f1_mean": 0.05,
         "return_mean": -0.9006,
         "steps_mean": 17.25,
-        "seconds_mean": 0.0443,
-        "seconds_max": 0.1548,
+        "seconds_mean": 0.0447,
+        "seconds_max": 0.1611,
         "experimental_partial_credit_f1_mean": 0.05
       },
       "clean": {
@@ -27,8 +27,8 @@
         "f1_mean": 0.2,
         "return_mean": -0.6024,
         "steps_mean": 20.6,
-        "seconds_mean": 0.0546,
-        "seconds_max": 0.1242,
+        "seconds_mean": 0.0532,
+        "seconds_max": 0.1215,
         "experimental_partial_credit_f1_mean": 0.2
       },
       "interaction": {
@@ -42,8 +42,8 @@
         "f1_mean": 0.0,
         "return_mean": -1.0,
         "steps_mean": 19.0,
-        "seconds_mean": 0.0405,
-        "seconds_max": 0.0448,
+        "seconds_mean": 0.0423,
+        "seconds_max": 0.0513,
         "experimental_partial_credit_f1_mean": 0.0
       },
       "mixed": {
@@ -57,8 +57,8 @@
         "f1_mean": 0.0,
         "return_mean": -1.0,
         "steps_mean": 14.7,
-        "seconds_mean": 0.041,
-        "seconds_max": 0.1548,
+        "seconds_mean": 0.0416,
+        "seconds_max": 0.1611,
         "experimental_partial_credit_f1_mean": 0.0
       }
     },
@@ -74,8 +74,8 @@
         "f1_mean": 0.8008,
         "return_mean": 0.565,
         "steps_mean": 20.05,
-        "seconds_mean": 0.0531,
-        "seconds_max": 0.1809,
+        "seconds_mean": 0.0556,
+        "seconds_max": 0.2148,
         "experimental_partial_credit_f1_mean": 0.8008
       },
       "clean": {
@@ -89,8 +89,8 @@
         "f1_mean": 1.0,
         "return_mean": 0.956,
         "steps_mean": 23.0,
-        "seconds_mean": 0.0656,
-        "seconds_max": 0.1443,
+        "seconds_mean": 0.0673,
+        "seconds_max": 0.1667,
         "experimental_partial_credit_f1_mean": 1.0
       },
       "interaction": {
@@ -104,8 +104,8 @@
         "f1_mean": 0.6667,
         "return_mean": 0.2965,
         "steps_mean": 19.4,
-        "seconds_mean": 0.0479,
-        "seconds_max": 0.0526,
+        "seconds_mean": 0.0465,
+        "seconds_max": 0.0497,
         "experimental_partial_credit_f1_mean": 0.6667
       },
       "mixed": {
@@ -119,8 +119,8 @@
         "f1_mean": 0.7683,
         "return_mean": 0.5038,
         "steps_mean": 18.9,
-        "seconds_mean": 0.0494,
-        "seconds_max": 0.1809,
+        "seconds_mean": 0.0544,
+        "seconds_max": 0.2148,
         "experimental_partial_credit_f1_mean": 0.7683
       }
     },
@@ -137,7 +137,7 @@
         "return_mean": -0.9941,
         "steps_mean": 3.7,
         "seconds_mean": 0.0475,
-        "seconds_max": 0.1798,
+        "seconds_max": 0.156,
         "experimental_partial_credit_f1_mean": 0.0058
       },
       "clean": {
@@ -151,8 +151,8 @@
         "f1_mean": 0.0,
         "return_mean": -1.0,
         "steps_mean": 3.4,
-        "seconds_mean": 0.057,
-        "seconds_max": 0.1463,
+        "seconds_mean": 0.0624,
+        "seconds_max": 0.128,
         "experimental_partial_credit_f1_mean": 0.0
       },
       "interaction": {
@@ -166,8 +166,8 @@
         "f1_mean": 0.0,
         "return_mean": -1.0,
         "steps_mean": 3.4,
-        "seconds_mean": 0.0423,
-        "seconds_max": 0.0515,
+        "seconds_mean": 0.0433,
+        "seconds_max": 0.0496,
         "experimental_partial_credit_f1_mean": 0.0
       },
       "mixed": {
@@ -181,8 +181,8 @@
         "f1_mean": 0.0061,
         "return_mean": -0.9883,
         "steps_mean": 4.0,
-        "seconds_mean": 0.0454,
-        "seconds_max": 0.1798,
+        "seconds_mean": 0.0421,
+        "seconds_max": 0.156,
         "experimental_partial_credit_f1_mean": 0.0116
       }
     },
@@ -198,8 +198,8 @@
         "f1_mean": 1.0,
         "return_mean": 1.0,
         "steps_mean": 1.0,
-        "seconds_mean": 0.0483,
-        "seconds_max": 0.2253,
+        "seconds_mean": 0.0422,
+        "seconds_max": 0.149,
         "experimental_partial_credit_f1_mean": 1.0
       },
       "clean": {
@@ -213,8 +213,8 @@
         "f1_mean": 1.0,
         "return_mean": 1.0,
         "steps_mean": 1.0,
-        "seconds_mean": 0.0535,
-        "seconds_max": 0.1246,
+        "seconds_mean": 0.0547,
+        "seconds_max": 0.1399,
         "experimental_partial_credit_f1_mean": 1.0
       },
       "interaction": {
@@ -228,8 +228,8 @@
         "f1_mean": 1.0,
         "return_mean": 1.0,
         "steps_mean": 1.0,
-        "seconds_mean": 0.0393,
-        "seconds_max": 0.0523,
+        "seconds_mean": 0.0398,
+        "seconds_max": 0.0495,
         "experimental_partial_credit_f1_mean": 1.0
       },
       "mixed": {
@@ -243,8 +243,8 @@
         "f1_mean": 1.0,
         "return_mean": 1.0,
         "steps_mean": 1.0,
-        "seconds_mean": 0.0502,
-        "seconds_max": 0.2253,
+        "seconds_mean": 0.0371,
+        "seconds_max": 0.149,
         "experimental_partial_credit_f1_mean": 1.0
       }
     }
@@ -265,11 +265,12 @@
       "f1": 1.0,
       "return": 0.988,
       "steps": 7,
-      "seconds": 0.031,
+      "seconds": 0.0299,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "random",
@@ -286,11 +287,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 30,
-      "seconds": 0.0587,
+      "seconds": 0.058,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "random",
@@ -307,11 +309,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 26,
-      "seconds": 0.0224,
+      "seconds": 0.0207,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "random",
@@ -328,11 +331,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 23,
-      "seconds": 0.0373,
+      "seconds": 0.0366,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "random",
@@ -349,11 +353,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 19,
-      "seconds": 0.0421,
+      "seconds": 0.0431,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "random",
@@ -370,11 +375,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 16,
-      "seconds": 0.0286,
+      "seconds": 0.0279,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "random",
@@ -395,7 +401,8 @@
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "random",
@@ -412,11 +419,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 10,
-      "seconds": 0.032,
+      "seconds": 0.0321,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "random",
@@ -433,11 +441,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 4,
-      "seconds": 0.0152,
+      "seconds": 0.0147,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "random",
@@ -454,11 +463,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 13,
-      "seconds": 0.0385,
+      "seconds": 0.0376,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "random",
@@ -475,11 +485,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 28,
-      "seconds": 0.0367,
+      "seconds": 0.0358,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "random",
@@ -496,11 +507,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 12,
-      "seconds": 0.1242,
+      "seconds": 0.1215,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "random",
@@ -517,11 +529,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 26,
-      "seconds": 0.0391,
+      "seconds": 0.0399,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "random",
@@ -538,11 +551,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 19,
-      "seconds": 0.0448,
+      "seconds": 0.0513,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "random",
@@ -559,11 +573,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 8,
-      "seconds": 0.0394,
+      "seconds": 0.0408,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "random",
@@ -580,11 +595,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 14,
-      "seconds": 0.019,
+      "seconds": 0.0202,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "random",
@@ -601,11 +617,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 21,
-      "seconds": 0.1548,
+      "seconds": 0.1611,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "random",
@@ -622,11 +639,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 5,
-      "seconds": 0.0184,
+      "seconds": 0.0197,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "random",
@@ -643,11 +661,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 25,
-      "seconds": 0.0372,
+      "seconds": 0.038,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "random",
@@ -664,11 +683,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 22,
-      "seconds": 0.0332,
+      "seconds": 0.032,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -685,11 +705,12 @@
       "f1": 1.0,
       "return": 0.97,
       "steps": 16,
-      "seconds": 0.0445,
+      "seconds": 0.0366,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -706,11 +727,12 @@
       "f1": 1.0,
       "return": 0.952,
       "steps": 25,
-      "seconds": 0.0679,
+      "seconds": 0.0664,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -727,11 +749,12 @@
       "f1": 1.0,
       "return": 0.98,
       "steps": 11,
-      "seconds": 0.0261,
+      "seconds": 0.023,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -748,11 +771,12 @@
       "f1": 0.666667,
       "return": 0.299333,
       "steps": 18,
-      "seconds": 0.047,
+      "seconds": 0.0451,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.666667
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -769,11 +793,12 @@
       "f1": 0.4,
       "return": -0.24,
       "steps": 21,
-      "seconds": 0.0526,
+      "seconds": 0.0497,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.4
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -790,11 +815,12 @@
       "f1": 0.857143,
       "return": 0.684286,
       "steps": 16,
-      "seconds": 0.0368,
+      "seconds": 0.0355,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.857143
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -811,11 +837,12 @@
       "f1": 0.823529,
       "return": 0.615059,
       "steps": 17,
-      "seconds": 0.0411,
+      "seconds": 0.0408,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.823529
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -832,11 +859,12 @@
       "f1": 1.0,
       "return": 0.964,
       "steps": 19,
-      "seconds": 0.0428,
+      "seconds": 0.0485,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -853,11 +881,12 @@
       "f1": 0.857143,
       "return": 0.694286,
       "steps": 11,
-      "seconds": 0.0195,
+      "seconds": 0.0191,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.857143
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -874,11 +903,12 @@
       "f1": 0.8,
       "return": 0.564,
       "steps": 19,
-      "seconds": 0.047,
+      "seconds": 0.0515,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.8
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -895,11 +925,12 @@
       "f1": 1.0,
       "return": 0.962,
       "steps": 20,
-      "seconds": 0.0451,
+      "seconds": 0.044,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -916,11 +947,12 @@
       "f1": 1.0,
       "return": 0.916,
       "steps": 43,
-      "seconds": 0.1443,
+      "seconds": 0.1667,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -937,11 +969,12 @@
       "f1": 0.666667,
       "return": 0.299333,
       "steps": 18,
-      "seconds": 0.0399,
+      "seconds": 0.0397,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.666667
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -958,11 +991,12 @@
       "f1": 0.8,
       "return": 0.562,
       "steps": 20,
-      "seconds": 0.0507,
+      "seconds": 0.0495,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.8
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -979,11 +1013,12 @@
       "f1": 0.8,
       "return": 0.562,
       "steps": 20,
-      "seconds": 0.0494,
+      "seconds": 0.0483,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.8
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -1000,11 +1035,12 @@
       "f1": 0.666667,
       "return": 0.313333,
       "steps": 11,
-      "seconds": 0.0234,
+      "seconds": 0.0236,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.666667
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -1021,11 +1057,12 @@
       "f1": 0.769231,
       "return": 0.440462,
       "steps": 50,
-      "seconds": 0.1809,
+      "seconds": 0.2148,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.769231
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -1042,11 +1079,12 @@
       "f1": 1.0,
       "return": 0.978,
       "steps": 12,
-      "seconds": 0.024,
+      "seconds": 0.0247,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -1063,11 +1101,12 @@
       "f1": 0.909091,
       "return": 0.784182,
       "steps": 18,
-      "seconds": 0.0428,
+      "seconds": 0.0444,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.909091
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "rule_based",
@@ -1084,11 +1123,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 16,
-      "seconds": 0.0358,
+      "seconds": 0.041,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1105,11 +1145,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 3,
-      "seconds": 0.029,
+      "seconds": 0.0489,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1126,11 +1167,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 3,
-      "seconds": 0.0538,
+      "seconds": 0.0719,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1147,11 +1189,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 3,
-      "seconds": 0.0198,
+      "seconds": 0.028,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1168,11 +1211,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 3,
-      "seconds": 0.0368,
+      "seconds": 0.0389,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1189,11 +1233,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 3,
-      "seconds": 0.0408,
+      "seconds": 0.0417,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1210,11 +1255,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 5,
-      "seconds": 0.0328,
+      "seconds": 0.0362,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1231,11 +1277,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 5,
-      "seconds": 0.0331,
+      "seconds": 0.0339,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1252,11 +1299,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 4,
-      "seconds": 0.0341,
+      "seconds": 0.0366,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1273,11 +1321,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 3,
-      "seconds": 0.0164,
+      "seconds": 0.0166,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1294,11 +1343,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 4,
-      "seconds": 0.04,
+      "seconds": 0.0394,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1315,11 +1365,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 3,
-      "seconds": 0.0362,
+      "seconds": 0.0352,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1336,11 +1387,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 5,
-      "seconds": 0.1463,
+      "seconds": 0.128,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1357,11 +1409,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 3,
-      "seconds": 0.0364,
+      "seconds": 0.0444,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1378,11 +1431,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 4,
-      "seconds": 0.0461,
+      "seconds": 0.0496,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1399,11 +1453,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 4,
-      "seconds": 0.0515,
+      "seconds": 0.0418,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1420,11 +1475,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 3,
-      "seconds": 0.0184,
+      "seconds": 0.0195,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1441,11 +1497,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 6,
-      "seconds": 0.1798,
+      "seconds": 0.156,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1462,11 +1519,12 @@
       "f1": 0.060606,
       "return": -0.882788,
       "steps": 3,
-      "seconds": 0.02,
+      "seconds": 0.0194,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.060606
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1483,11 +1541,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 3,
-      "seconds": 0.0461,
+      "seconds": 0.0332,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.055556
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "flag_all",
@@ -1504,11 +1563,12 @@
       "f1": 0.0,
       "return": -1.0,
       "steps": 4,
-      "seconds": 0.0333,
+      "seconds": 0.0301,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 0.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1525,11 +1585,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.0345,
+      "seconds": 0.0283,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1546,11 +1607,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.0605,
+      "seconds": 0.0511,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1567,11 +1629,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.017,
+      "seconds": 0.0242,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1588,11 +1651,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.0369,
+      "seconds": 0.0352,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1609,11 +1673,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.0523,
+      "seconds": 0.0405,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1630,11 +1695,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.0259,
+      "seconds": 0.0275,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1651,11 +1717,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.0323,
+      "seconds": 0.0286,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1672,11 +1739,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.0331,
+      "seconds": 0.0303,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1693,11 +1761,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.0146,
+      "seconds": 0.0131,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1714,11 +1783,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.0359,
+      "seconds": 0.0339,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1735,11 +1805,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.0309,
+      "seconds": 0.0302,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1756,11 +1827,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.1246,
+      "seconds": 0.1399,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1777,11 +1849,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.0292,
+      "seconds": 0.0376,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1798,11 +1871,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.0397,
+      "seconds": 0.0495,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1819,11 +1893,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.0385,
+      "seconds": 0.0363,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1840,11 +1915,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.0164,
+      "seconds": 0.0177,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1861,11 +1937,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.2253,
+      "seconds": 0.149,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1882,11 +1959,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.0265,
+      "seconds": 0.0156,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1903,11 +1981,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.0494,
+      "seconds": 0.0297,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     },
     {
       "policy": "oracle",
@@ -1924,11 +2003,12 @@
       "f1": 1.0,
       "return": 1.0,
       "steps": 1,
-      "seconds": 0.0422,
+      "seconds": 0.0251,
       "visible_reward": 0.0,
       "experimental": {
         "partial_credit_f1": 1.0
-      }
+      },
+      "agent_timeout": false
     }
   ],
   "paired_checks": [

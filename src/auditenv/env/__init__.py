@@ -17,7 +17,7 @@ from .. import ENV_VERSION, FINDING_TYPES
 from ..schemas import ACTION_SCHEMAS, LIMITS, TABLES, validate
 from ..tools.calculator import CalculatorError, evaluate
 from .bundle import PublicBundle
-from .provider import EpisodeProvider, GeneratorProvider
+from .provider import DirectoryProvider, EpisodeProvider, GeneratorProvider
 
 ERRORS = {
     "invalid_action": "action must be a JSON object with a known 'action' field",
@@ -60,6 +60,10 @@ class AuditEnv:
         self._time_limit = time_limit_s
         self._clock = clock
         self._s = None
+
+    @property
+    def time_limit_s(self) -> float:
+        return self._time_limit
 
     # ------------------------------------------------------------------ gym API
     def reset(self, seed: int | None = None, config: dict | None = None, options: dict | None = None):
@@ -191,4 +195,4 @@ class AuditEnv:
         return obs, reward, False, True, info
 
 
-__all__ = ["AuditEnv", "PublicBundle", "GeneratorProvider", "EpisodeProvider", "ERRORS", "TASK"]
+__all__ = ["AuditEnv", "PublicBundle", "GeneratorProvider", "EpisodeProvider", "DirectoryProvider", "ERRORS", "TASK"]

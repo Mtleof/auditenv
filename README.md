@@ -46,7 +46,7 @@ docker run --rm --network none auditenv:1.0.0
 
 Сеть нужна только чтобы скачать базовый образ `python:3.11.10-slim-bookworm`; pytest и зависимости ставятся
 из `vendor/wheels/` (`--no-index`, проверка sha256), apt не используется. Контейнер запускает
-`python scripts/check.py`. Проверено: в контейнере Python 3.11.10, сети нет, проходят все 178 тестов,
+`python scripts/check.py`. Проверено: в контейнере Python 3.11.10, сети нет, проходят все тесты,
 а `trajectories.jsonl` побайтово совпадает с файлом из репозитория.
 
 ### Демо со скриптовой политикой
@@ -83,6 +83,48 @@ obs, reward, terminated, truncated, info = env.step(
 Награда за исследование 0. Терминальная: `clip(2·F1 − 1 − 0.002·inspection_steps, −1, 1)`; в закрытом режиме
 агент всегда видит 0.0, оценка остаётся в журнале оценщика (`provider.log`). Неверная структура submit ⇒ −1.
 Лимит шагов/времени ⇒ `truncated=True`, ответ считается пустым.
+
+## Для жюри: проверка на своих seed, файлах и политиках
+
+Построчная сверка с требованиями кейса — [`docs/compliance.md`](docs/compliance.md). Ниже — сценарии
+закрытой проверки (раздел 06). Перед командами задайте путь к коду: `export PYTHONPATH=src`.
+
+Прогнать 4 политики на своих скрытых seed и новых сочетаниях параметров (JSON-список
+`{"seed": ..., "config": {...}, "category": "..."}`):
+
+```bash
+python -m auditenv.cli evaluate --suite hidden.json --out reports_hidden
+```
+
+Прогнать политики на эпизодах с диска, в том числе после своих преобразований файлов (перестановка строк,
+смена ID): папки `<root>/episodes/<split>/<id>/` и `<root>/grader/<split>/<id>/truth.json`.
+
+```bash
+python -m auditenv.cli evaluate --root /path/to/root --split hidden --out reports_hidden
+```
+
+Независимо проверить данные и эталон по записям (расхождение после внесения ошибки и достаточность
+каждого набора доказательств):
+
+```bash
+python -m auditenv.cli validate --root /path/to/root --split hidden
+```
+
+Подключить свою политику: класс с методами `reset(observation)` и `act(observation) -> action`. Она
+запускается в отдельном процессе агента и видит только наблюдения:
+
+```bash
+python -m auditenv.cli evaluate --suite hidden.json --policies my_policies:Baseline,oracle --extra-path /path/to/dir
+```
+
+Один эпизод с выводом каждого шага и записью траектории:
+
+```bash
+python -m auditenv.cli run --policy rule_based --seed 123456789 --trajectory one.jsonl
+```
+
+Зависший агент останавливается по дедлайну эпизода (60 с), упавший — получает пустой ответ.
+Оба случая дают `truncated=True` и не прерывают прогон остальных эпизодов.
 
 ## Траектории (`trajectories.jsonl`)
 

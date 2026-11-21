@@ -26,3 +26,6 @@ Thumbs.db
 # vendored, hash-pinned test dependencies for the offline build: always keep
 !vendor/wheels/
 !vendor/wheels/*.whl
+
+# delivery archive built for the user, not part of the project
+/auditenv.zip

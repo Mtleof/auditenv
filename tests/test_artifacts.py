@@ -17,7 +17,7 @@ def path(*p):
     return os.path.join(ROOT, *p)
 
 
-@pytest.mark.parametrize("f", ["README.md", "docs/design.md", "Dockerfile", "LICENSE", "requirements.txt",
+@pytest.mark.parametrize("f", ["README.md", "docs/design.md", "docs/compliance.md", "Dockerfile", "LICENSE", "requirements.txt",
                                "Makefile", "trajectories.jsonl", "scripts/demo.py", "scripts/check.py"])
 def test_deliverable_exists(f):
     assert os.path.getsize(path(f)) > 0
